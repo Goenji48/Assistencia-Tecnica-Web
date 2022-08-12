@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
+    <script src="javascript/login.js" defer></script>
+    <link rel="stylesheet" href="css/login-style.css">
+    <title>Assistência Técnica - Login</title>
+</head>
+<body background="img/wallpapersden.com_abstract-purple-shape_7680x4320.jpg">
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" method="get">
+                <h1>Criar Conta</h1>
+                <div class="social-content">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-instagram-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-youtube-f"></i></a>
+                </div>
+               <!--<span>Ou use seu Email para registrar</span> -->
+                <input type="text" placeholder="RG" name="rg"  maxlength="100"/> 
+                <input type="text" placeholder="Name" onblur="getName()" name="name"  maxlength="100"/>
+                <input type="text" placeholder="Username" name="username" onblur="getUsername()" maxlength="100"/>
+                <input type="email" placeholder="Email" name="email" id="email" maxlength="100"/>
+                <input type="password" placeholder="Password" name="password" maxlength="50"/>
+                <input type="password" placeholder="Confirm password" name="confirm_password" maxlenght="50"/>
+                <input type="date" placeholder="Data Nascimento" name="date_birthday"/>
+                <input type="tel" placeholder="Phone" name="phone" maxlength="11"/>
+                <input type="number" placeholder="CEP" name="cep" max="8">
+                <input type="number" placeholder="House Number" name="numberHouse" maxlength="3">
+                <button>Criar</button>
+            </form>
+        </div>
+    <div class="form-container sign-in-container">
+       <div class="voltar">
+            <a href="index.html">Voltar</a>
+        </div> 
+        <form>
+            <h1>Login</h1>
+            <div class="social-content">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-instagram-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-youtube-f"></i></a>
+            </div>
+           <!-- <span>Ou Use Sua Conta</span> -->
+            <input type="email" placeholder="Email" name="email_user" maxlength="100"/>
+            <input type="password" placeholder="Password" name="password_user" maxlength="50"/>
+            <a href="#" id="esqueceusenha">Esqueceu Sua Senha?</a>
+            <button id="logar">Logar</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Bem Vindo de Volta!</h1>
+                <p>Já Possui Uma Conta?</p>
+                <button class="ghost ghost-animation" id="login">Login</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Bem Vindo, Cliente!</h1>                
+                <p>Venha Fazer Parte do Nosso Site</p>
+                <button class="ghost ghost-animation" id="criarConta">Criar Conta</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="linha">
+
+        <!-- parte final do site -->
+
+        <footer>
+    <div class="footer-font">
+        <span>&copy; 2022 - Assistência Técnica - Criador Principal: João Luiz - Equipe 3 - TCC - Trabalho Conclusão de Curso - ITB - Brasílio de Flores Azevedo</span>
+        <div class="">
+        </div>
+    </div>
+</footer>
+    </div>
+</div>
+</body>
+</html>
