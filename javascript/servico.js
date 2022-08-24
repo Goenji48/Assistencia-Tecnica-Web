@@ -141,7 +141,7 @@ function showDetailsTablet(){
     popup_left.style.backgroundImage = "url(./img/8272e0990ca648e40df0ec6b040d4d16.jpg)"
 }
 
-function showDetailsEletrodomesticos(){
+function showDetailsEletrodomesticos() {
     card.style.filter = "blur(20px)"
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"

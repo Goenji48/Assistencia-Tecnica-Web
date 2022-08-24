@@ -1,10 +1,12 @@
 body{
+    width: 100%;
     height: 60vmax;
 }
 
 .card{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -12,6 +14,7 @@ body{
 .card1{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
