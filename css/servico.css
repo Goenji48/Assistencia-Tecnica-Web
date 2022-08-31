@@ -1,0 +1,141 @@
+body{
+    height: 60vmax;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+:root{
+    --borderColorDefault: rgb(255, 0, 221);
+    --borderColorDefault: rgb(4, 0, 255);
+}
+
+.container:not(hover){
+    width: 350px;
+    min-height: 200px;
+    background-color: #171B4D;
+    margin: 10px;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: rgb(255, 0, 221);
+    box-shadow: 2px 2px 30px 2px rgb(255, 0, 221);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container:hover{
+    color: white;
+    transition: 0.5s;
+    margin-top: 5px;
+    background-color: rgb(255, 0, 221);
+    animation: newBoderColor 0.5s infinite alternate;
+}
+
+.container{
+    justify-content: center;
+    animation: borderColor 1s infinite alternate;
+}
+
+
+
+@keyframes borderColor{
+    0%{
+        box-shadow: 2px 2px 30px 2px rgb(255, 0, 221);;
+        border-color: rgb(255, 0, 221);
+    }
+    100%{
+        box-shadow: 2px 2px 30px 2px rgb(4, 0, 255);
+        border-color: rgb(4, 0, 255);
+    }
+}
+
+@keyframes newBorderColor{
+    0%{
+        box-shadow: 2px 2px 30px 2px white;
+        border-color: rgb(255, 0, 221);
+    }
+    100%{
+        box-shadow: 2px 2px 30px 2px rgb(4, 0, 255);
+        border-color: rgb(4, 0, 255);
+    }
+}
+
+img{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+#phone-icon{
+    width: 19%;
+    height: 19%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p{
+    text-align: justify;
+    padding: 10px 5px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.popup-container{
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    transition: 0.5s;
+}
+
+.popup-left{
+    background-size: cover;
+    background-position: -50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 10px 5px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 2px 2px 20px 2px black;
+}
+
+.popup-right{
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 10px 5px;
+    min-width: 500px;
+    margin-left: 100%;
+    height: 400px;
+    box-shadow: 2px 2px 20px 2px black;
+    text-align: justify;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-right h1{
+    color: black;
+}
