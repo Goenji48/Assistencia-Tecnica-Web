@@ -103,6 +103,7 @@ li{
     opacity: 0;
     left: 50%;
     top: 50%;
+    visibility: hidden;
     transform: translate(-50%, -50%);
     position: fixed;
     transition: 0.5s;

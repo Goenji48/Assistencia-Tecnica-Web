@@ -16,6 +16,7 @@ function showDetailsComputer(){
     popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "45%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Computadores"
     container_details.innerHTML = "<div>" +
@@ -46,6 +47,7 @@ function showDetailsNotebook(){
     popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "40%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Notebook"
     container_details.innerHTML = "<div>" +
@@ -72,6 +74,7 @@ function showDetailsCelulares(){
     popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "30%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Celulares"
     container_details.innerHTML = "<div>" +
@@ -99,6 +102,7 @@ function showDetailsTelevisores(){
     popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "45%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Televisores"
     container_details.innerHTML = "<div>" +
@@ -123,6 +127,7 @@ function showDetailsTablet(){
     popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "40%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Tablets"
     container_details.innerHTML = "<div>" +
@@ -149,6 +154,7 @@ function showDetailsEletrodomesticos() {
     popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "30%"
+    popup_container.style.visibility = "visible"
     popup_container.style.transition = 0.5
     container_title.innerText = "Eletrodomésticos"
     container_details.innerHTML = "<div>" +
@@ -170,6 +176,7 @@ function exitDetailsContainer(){
     popup_container.style.translate = "scaleY(0)"
     popup_container.style.left = "50%"
     popup_container.style.top = "55%"
+    popup_container.style.visibility = "hidden"
     popup_container.style.transition = 0.5
     card.style.filter = "blur(0px)"
     card1.style.filter = "blur(0px)"

@@ -1,5 +1,5 @@
 let popup_container = document.getElementById('container')
-let popup_left = document.getElementById('popup-left-background')
+let popup_left = document.getElementById('popup-bottom-background')
 let card = document.getElementsByClassName('card')[0]
 let card1 = document.getElementsByClassName('card1')[0]
 let container_title = document.getElementById('container-title')
@@ -14,9 +14,8 @@ function showDetailsComputer(){
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Computadores"
     container_details.innerHTML = "<div>" +
     "<h2>Componentes Principais:</h2>" +
@@ -44,9 +43,8 @@ function showDetailsNotebook(){
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Notebook"
     container_details.innerHTML = "<div>" +
     "<h2> Componentes Principais:</h2>" +
@@ -70,9 +68,8 @@ function showDetailsCelulares(){
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Celulares"
     container_details.innerHTML = "<div>" +
     "<h2> Componentes Principais:</h2>" +
@@ -97,9 +94,8 @@ function showDetailsTelevisores(){
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Televisores"
     container_details.innerHTML = "<div>" +
     "<h2> Componentes Principais:</h2>" +
@@ -121,9 +117,8 @@ function showDetailsTablet(){
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Tablets"
     container_details.innerHTML = "<div>" +
     "<h2> Componentes Principais:</h2>" +
@@ -147,9 +142,8 @@ function showDetailsEletrodomesticos() {
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
     popup_container.style.opacity = 100
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "visible";
     container_title.innerText = "Eletrodomésticos"
     container_details.innerHTML = "<div>" +
     "<h2> Alguns Eletrodomésticos que reparamos:</h2>" +
@@ -168,9 +162,8 @@ function exitDetailsContainer(){
     popup_container.style.opacity = 0
     popup_container.style.translate = "scaleX(0)"
     popup_container.style.translate = "scaleY(0)"
-    popup_container.style.top = "50%"
-    popup_container.style.left = "25%"
     popup_container.style.transition = 0.5
+    popup_container.style.visibility = "hidden";
     card.style.filter = "blur(0px)"
     card1.style.filter = "blur(0px)"
     header_html.style.filter = "blur(0px)"
