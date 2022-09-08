@@ -8,6 +8,7 @@ body{
 	margin: 0; 
 	background-color: #171B4D;
 	color: white;
+    width: 80vmax;
 	background-size: cover;
 	background-attachment: fixed;
     display: grid;
