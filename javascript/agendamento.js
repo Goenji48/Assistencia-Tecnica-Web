@@ -11,5 +11,5 @@ function agendado(){
 }
 
 function voltarParaPaginaPrincipal(){
-    window.location.href = "/index.html";
+    window.location.href = "./index.php";
 }

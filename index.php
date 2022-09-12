@@ -115,16 +115,10 @@
 		</div>
 		<div class="footer">
 			<div class="linha">
-
 				<!-- parte final do site -->
-
 				<footer>
-			<div class="coluna col12">
-				<span>&copy; 2022 - Assistência Técnica - Criador Principal: João Luiz</span>
-				<div class="sem-marcador">
-					<li>Equipe 3 - TCC - Trabalho Conclusão de Curso</li>
-					<li>ITB - Brasílio de Flores Azevedo</li>
-				</div>
+			<div class="footer-font">
+				<span>&copy; 2022 - Assistência Técnica - Criador Principal: João Luiz - Equipe 3 - TCC - Trabalho Conclusão de Curso - ITB - Brasílio de Flores Azevedo</span>
 			</div>
 		</footer>
 			</div>

@@ -111,8 +111,6 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         <footer>
     <div class="footer-font">
         <span>&copy; 2022 - Assistência Técnica - Criador Principal: João Luiz - Equipe 3 - TCC - Trabalho Conclusão de Curso - ITB - Brasílio de Flores Azevedo</span>
-        <div class="">
-        </div>
     </div>
 </footer>
     </div>
