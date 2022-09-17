@@ -11,6 +11,7 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         $password = $mysqli->real_escape_string($_POST['password_user']);
 
         $query = "SELECT * FROM Cliente WHERE email = '$email' AND senha = '$password' ";
+        //$query = "CALL login('$email', '$password')";
         $query1 = $mysqli->query($query) or die("Erro na execução do Código SQL: " . $mysqli->error);
 
         $result = $query1->num_rows;
@@ -23,7 +24,8 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
             }
 
             $_SESSION['id'] = $user['idCliente'];
-            $_SESSION['name'] = $user['usernome'];
+            $_SESSION['username'] = $user['usernome'];
+            $_SESSION['name'] = $user['nome'];
 
             header("Location: home.php");
 
@@ -105,9 +107,7 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
 </div>
 <div class="footer">
     <div class="linha">
-
         <!-- parte final do site -->
-
         <footer>
     <div class="footer-font">
         <span>&copy; 2022 - Assistência Técnica - Criador Principal: João Luiz - Equipe 3 - TCC - Trabalho Conclusão de Curso - ITB - Brasílio de Flores Azevedo</span>

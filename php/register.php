@@ -39,11 +39,17 @@ if(isset($_POST['rg']) || isset($_POST['name'])
         $cep = $mysqli->real_escape_string($_POST['cep']);
         $houseNumber = $mysqli->real_escape_string($_POST['houseNumber']);
 
-        $query = "INSERT INTO Cliente VALUES(idCliente, '$rg', '$name', '$username', '$email', '$password', '$confirm_password', '$date', '$phone', '$cep', '$houseNumber)";
+        $query = "INSERT INTO Cliente VALUES(idCliente, '$rg', '$name', '$username', '$email', '$password', '$confirm_password', '$date', '$phone', '$cep', '$houseNumber')";
 
-        $query1 = $mysqli->query($query) or die("Erro na execução do Código SQL: " . $mysqli->error);
+        //$query1 = $mysqli->query($query) or 
 
-        echo "Conta Criada com Sucesso!";
+        if($mysqli->query($query)){
+            echo "Conta Criada com Sucesso!";
+        } else {
+            die("Erro na execução do Código SQL: " . $mysqli->error);
+        }
+
+        
 
         /*$result = $query1->num_rows;
 

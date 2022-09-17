@@ -1,4 +1,5 @@
 <?php
+include("php/protect.php");
 $loginName = '';
 
 if(isset($_SESSION)){
@@ -36,7 +37,7 @@ if(isset($_SESSION)){
 					<div class="coluna col10">
 						<nav>
 							<!-- barra de navegação do site -->
-								<a href="index.php" class="btn4 alinhamento">Home</a>
+								<a href="index.html" class="btn4 alinhamento">Home</a>
 								<a href="agendamento.php" class="btn4 alinhamento">Agendamentos<a>
 								<a href="servico.html" class="btn4 alinhamento">Serviço</a>
 								<a href="sobre.html" class="btn4 alinhamento">Sobre</a>
