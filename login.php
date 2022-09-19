@@ -59,22 +59,22 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
                     <a href="#" class="social"><i class="fab fa-youtube-f"></i></a>
                 </div>
                <!--<span>Ou use seu Email para registrar</span> -->
-                <input type="text" placeholder="RG" name="rg"  maxlength="100"/> 
+                <input type="text" placeholder="RG" name="rg"  maxlength="12"/> 
                 <input type="text" placeholder="name" onblur="getName()" name="name"  maxlength="100"/>
                 <input type="text" placeholder="username" name="username" onblur="getUsername()" maxlength="100"/>
                 <input type="email" placeholder="email" name="email" id="email" maxlength="100"/>
                 <input type="password" placeholder="password" name="password" maxlength="50"/>
                 <input type="password" placeholder="confirm password" name="confirm_password" maxlenght="50"/>
-                <input type="text" placeholder="ano/mes/dia exemplo: 19670701" name="date_birthday"/>
-                <input type="tel" placeholder="phone" name="phone" maxlength="11"/>
-                <input type="number" placeholder="CEP" name="cep">
-                <input type="number" placeholder="houseNumber" name="houseNumber" maxlength="3">
+                <input type="text" placeholder="ano/mes/dia exemplo: 1967-07-01" name="date_birthday"/>
+                <input type="text" placeholder="phone" name="phone" maxlength="15"/>
+                <input type="text" placeholder="CEP" name="cep" maxlength="9">
+                <input type="text" placeholder="houseNumber" name="houseNumber" maxlength="5">
                 <button type="submit">Criar</button>
             </form>
         </div>
     <div class="form-container sign-in-container">
        <div class="voltar">
-            <a href="index.php">Voltar</a>
+            <a href="index.html">Voltar</a>
         </div> 
         <form action="" method="POST">
             <h1>Login</h1>

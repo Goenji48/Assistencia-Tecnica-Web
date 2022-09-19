@@ -272,6 +272,12 @@ a:not(hover){
     overflow: hidden;
 }
 
+text{
+    color: #ff41d6;
+    margin: 20px;
+    font-size: 20px;
+}
+
 
 
 

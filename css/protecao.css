@@ -1,0 +1,27 @@
+body{
+    background-color: #170940;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+}
+
+a:not(hover){
+    color: gray;
+    transition: 0.5s;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(255, 0, 221);
+    transition: 0.5s;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+}

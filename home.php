@@ -41,7 +41,7 @@ if(isset($_SESSION)){
 								<a href="agendamento.php" class="btn4 alinhamento">Agendamentos<a>
 								<a href="servico.html" class="btn4 alinhamento">Serviço</a>
 								<a href="sobre.html" class="btn4 alinhamento">Sobre</a>
-								<a href="php/logout.php" class="btn4 alinhamento" id="loginNome">Sair</a>
+								<a href="perfil.php" class="btn4 alinhamento" id="loginNome">Perfil</a>
 						</nav>
 					</div>
 				</header>

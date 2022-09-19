@@ -1,5 +1,5 @@
 <?php
-include("_connection.php");
+include("connection.php");
 
 if(isset($_POST['rg']) || isset($_POST['name'])
 || isset($_POST['username']) || isset($_POST['email'])
@@ -39,12 +39,14 @@ if(isset($_POST['rg']) || isset($_POST['name'])
         $cep = $mysqli->real_escape_string($_POST['cep']);
         $houseNumber = $mysqli->real_escape_string($_POST['houseNumber']);
 
-        $query = "INSERT INTO Cliente VALUES(idCliente, '$rg', '$name', '$username', '$email', '$password', '$confirm_password', '$date', '$phone', '$cep', '$houseNumber')";
+        $query = "INSERT INTO Cliente VALUES(idCliente, '$rg', '$name', '$username', '$email', '$password', '$date', '$phone', '$cep', '$houseNumber', now())";
 
         //$query1 = $mysqli->query($query) or 
 
         if($mysqli->query($query)){
-            echo "Conta Criada com Sucesso!";
+            echo "Conta Criada com Sucesso! Efetue o Login... Redirectionando em 3seg...";
+            header("Location: ../login.php");
+            sleep(3);
         } else {
             die("Erro na execução do Código SQL: " . $mysqli->error);
         }

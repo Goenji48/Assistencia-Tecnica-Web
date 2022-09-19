@@ -1,0 +1,151 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../img/profile_background.jpg");
+    background-size: cover;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+.background .container{
+    opacity: 1;
+}
+
+.container{
+    width: 400px;
+    min-height: 600px;
+    background-color: white;
+    box-shadow: 1px 1px 100px 0.2px rgb(141, 141, 141);
+    border-radius: 20px;
+}
+
+.container-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-item a:not(hover){
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-style: bold;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    box-shadow: 1px 1px 30px rgb(160, 151, 192);
+}
+
+.container-item a:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container-item img{
+    margin-top: 10px;
+    width: 50%;
+    height: 50%;
+    box-shadow: 1px 1px 30px rgb(160, 151, 192);
+    border-radius: 100px;
+}
+
+.container-item h1{
+    font-size: 40px;
+    font-style: bold;
+}
+
+.container-item h2{
+    margin-top: -10px;
+    font-size: 20px;
+    font-style: bold;
+}
+
+.container-item p{
+    margin-top: -5px;
+    font-size: 20px;
+    width: 350px;
+    font-style: bold;
+    text-align: justify;
+}
+
+.container-item .container-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container-item .container-buttons img{
+    width: 25%;
+    height: 25%;
+    margin: 30px;
+    box-shadow: 1px 1px 30px rgb(160, 151, 192);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.container-item .container-buttons .button-1{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-item .container-buttons .button-1 img{
+    width: 100px;
+    height: 100px;
+}
+
+.container-item .container-buttons .button-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-item .container-buttons .button-2 img{
+    width: 100px;
+    height: 100px;
+}
+
+.container-item .container-buttons h1{
+    margin-top: -15px;
+    font-size: 20px;
+    font-variant: normal;
+}
+
+#arrow-back{
+    width: 15%;
+    height: 15%;
+    align-self: flex-start;
+    margin: 10px;
+    box-shadow: none;
+    cursor: pointer;
+}
+

@@ -53,7 +53,17 @@ isset($_POST['problemType']) || isset($_POST['dia']) || isset($_POST['hora'])){
 
         $querySchedule = "INSERT INTO Agendamento VALUES(idAgendamento, '$name', '$id', '$dia', '$hora', '$idCliente')";
 
-        $query3 = $mysqli->query($querySchedule) or die("Erro na execução do Código SQL: " . $mysqli->error);
+        if($mysqli->query($querySchedule)){
+            echo "Agendamento Realizado com Sucesso!";
+        } else {
+            die("Erro na execução do Código SQL: " . $mysqli->error);
+        }
+
+        /*$result = $query3->num_rows;
+
+        if($result == 1){
+            header("Location: agendado.php");
+        }*/
 
         //$equipamentType = $query1->fetch_assoc();
         /*if($mysql->query($query)){
@@ -109,6 +119,7 @@ isset($_POST['problemType']) || isset($_POST['dia']) || isset($_POST['hora'])){
                 <option value="Liga Mas Depois de Alguns Segundos Desliga">Liga Mas Depois de Alguns Segundos Desliga</option>
                 <option value="Exibe Mensagem de Erro">Exibe Mensagem de Erro</option>
                 <option value="Erro de Software">Erro de Sofware</option>
+                <option value="Outros">Outros</option>
             </select>
             <h3>Horário e Dia</h3>
             <input type="date" name="dia"/>

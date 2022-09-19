@@ -1,3 +1,8 @@
+<?php
+include("./php/protect_login.php");
+
+?>
+
 <!DOCTYPE HTML>
 	<html lang="pt-br">
 	<head>

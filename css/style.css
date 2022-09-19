@@ -5,6 +5,10 @@ body{
 	color: white;
 	background-size: cover;
 	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 ::-webkit-scrollbar{
@@ -131,7 +135,14 @@ nav{
 .footer-font{
     font-size: small;
 }
+
+
 .header{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	background-color: #170940;
 }
 .logo{
