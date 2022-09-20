@@ -67,8 +67,8 @@ body{
 
 .container-item img{
     margin-top: 10px;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     box-shadow: 1px 1px 30px rgb(160, 151, 192);
     border-radius: 100px;
 }
