@@ -9,9 +9,14 @@ $query = "SELECT * FROM Agendamento where idCliente = '$idCliente' ";
 
 $query2 = "SELECT * FROM Equipamento where idCliente = '$idCliente' ";
 
+$query3 = "SELECT * FROM Servico where idCliente = '$idCliente' ";
+
 $result  = $mysqli->query($query) or die("Erro na execução do Código: " + $mysqli->error);
 
 $result2  = $mysqli->query($query2) or die("Erro na execução do Código: " + $mysqli->error);
+
+$result3  = $mysqli->query($query3) or die("Erro na execução do Código: " + $mysqli->error);
+
 
 
 while($row = mysqli_fetch_array($result)){
@@ -23,8 +28,16 @@ while($row = mysqli_fetch_array($result)){
 while($row2 = mysqli_fetch_array($result2)){
     $nomeEquipamento = $row2['nome'];
     $defeito = $row2['tipoDefeito'];
-    $_SESSION['idEquip'] = $nomeEquipamento;
 }
+
+while($row3 = mysqli_fetch_array($result3)){
+    if(isset($row3['valor'])){
+        $valor = $row3['valor'];
+    } else {
+        $valor = "R$ 0,00";
+    }
+}
+
 
 ?>
 
@@ -68,7 +81,13 @@ while($row2 = mysqli_fetch_array($result2)){
             <td> <?php echo $defeito ?></td>
             <td> <?php echo $dia ?></td>
             <td> <?php echo $hora ?></td>
-            <td></td>
+            <td> <?php
+            
+             if(isset($valor)){
+                echo $valor;
+             } else{
+                echo "0";
+             } ?></td>
             <td></td>
         </tr>
     </table>

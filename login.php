@@ -14,6 +14,8 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         //$query = "CALL login('$email', '$password')";
         $query1 = $mysqli->query($query) or die("Erro na execução do Código SQL: " . $mysqli->error);
 
+        
+
         $result = $query1->num_rows;
 
         if($result == 1){

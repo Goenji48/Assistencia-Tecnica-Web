@@ -1,4 +1,5 @@
 <?php
+include("checkIfExistSchedule.php");
 /*header("Content-type: text/css");
 $background_color = "black";
 $color = "pink";*/
