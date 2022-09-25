@@ -32,7 +32,7 @@ try{
         $mail->addAddress($email1);
         $mail->isHTML(true);
         $mail->Subject = "Recuperação de Senha - TCC Assistência Técnica Web";
-        $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.html'>Recuperar Senha</a>";
+        $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.php'>Recuperar Senha</a>";
         $mail->AltBody = "Você Solicitou uma recuperação de senha no nosso site, Clique nesse link para trocar a senha";
 
     if($mail->send()){
