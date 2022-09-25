@@ -1,11 +1,55 @@
 <?php
+require_once("php/PHPMailer.php");
+require_once("php/SMTP.php");
+require_once("php/Exception.php");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
+$mail = new PHPMailer(true);
+
+if(isset($_POST['email-input'])){
+    if(strlen($_POST['email-input']) == 0){
+        echo "Preencha o Campo de Email";
+    } else {
+        $email1 = $_POST['email-input'];
+        //header("Location: php/sendEmail.php");
+    }
+}
+
+try{
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'tccassistenciatecnica@gmail.com';
+    $mail->Password = 'xintzpkaxgabmrro';
+    $mail->Port = 587;
+
+    $mail->setFrom('tccassistenciatecnica@gmail.com');
+    if(isset($email1)){
+        $mail->addAddress($email1);
+        $mail->isHTML(true);
+        $mail->Subject = "Recuperação de Senha - TCC Assistência Técnica Web";
+        $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.html'>Recuperar Senha</a>";
+        $mail->AltBody = "Você Solicitou uma recuperação de senha no nosso site, Clique nesse link para trocar a senha";
+
+    if($mail->send()){
+        echo 'Email enviado com Sucesso, Verifique se recebeu o email para efetuar a troca de senha.';
+    } else {
+        echo 'Email nao enviado';
+    }
+    }
+
+} catch (Exception $e){
+    echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
+}
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,21 +57,17 @@
     <title>Recuperação de Senha - Assistência Técnica</title>
     <link rel="stylesheet" href="css/recuperacaoSenha.css">
     <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
-    <script src="javascript/verifyEmail.js" defer></script>
+    <script src="javascript/profile.js"></script>
 </head>
 <body>
     <div class="container">
         <img src="img/arrow_back_icon_151627.png" alt="Botão de Voltar" id="backButton" onclick="backToHome()">
         <h1>Recuperação de Senha</h1>
         <h2>Digite seu Email</h2>
-        <form action="php/sendEmail.php" method="POST">
+        <form action="" method="POST" target="">
             <input type="email" name="email-input" placeholder="Email">
             <button type="submit" onclick="verify()">Enviar</button>
         </form>
-    </div>
-    <div class="alert">
-        <h1>Email Enviado!</h1>
-        <p>Verifique se recebeu o email para realizar a troca de senha</p>
     </div>
 </body>
 </html>
