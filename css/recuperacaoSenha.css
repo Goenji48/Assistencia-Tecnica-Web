@@ -74,3 +74,16 @@ form{
 .container h1{
     margin-top: 30px;
 }
+
+.alert{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden;
+    transition: 0.5s;
+}
