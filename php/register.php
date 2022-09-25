@@ -46,7 +46,8 @@ if(isset($_POST['rg']) || isset($_POST['name'])
         if($mysqli->query($query)){
             if($password == $confirm_password){
                 echo "Conta Criada com Sucesso! Efetue o Login... Redirectionando em 3seg...";
-                //header("Location: ../login.php");
+                header("Location: ../registered.html");
+                
             } else {
                 echo "Confirmação de Senha Inválida, certifique se está preenchido corretamente";
             }
