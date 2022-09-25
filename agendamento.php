@@ -10,7 +10,6 @@ isset($_POST['problemType']) || isset($_POST['dia']) || isset($_POST['hora'])){
     //} else if(strlen($_POST['category']) == 0){
         //echo "Selecione a Categoria";
     //}
-    
     if(strlen($_POST['nome']) == 0){
         echo "Preencha o nome do Equipamento";
     

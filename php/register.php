@@ -44,9 +44,12 @@ if(isset($_POST['rg']) || isset($_POST['name'])
         //$query1 = $mysqli->query($query) or 
 
         if($mysqli->query($query)){
-            echo "Conta Criada com Sucesso! Efetue o Login... Redirectionando em 3seg...";
-            header("Location: ../login.php");
-            sleep(3);
+            if($password == $confirm_password){
+                echo "Conta Criada com Sucesso! Efetue o Login... Redirectionando em 3seg...";
+                //header("Location: ../login.php");
+            } else {
+                echo "Confirmação de Senha Inválida, certifique se está preenchido corretamente";
+            }
         } else {
             die("Erro na execução do Código SQL: " . $mysqli->error);
         }

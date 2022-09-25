@@ -76,16 +76,16 @@ button:focus{
 }
 
 button:hover{
-    background-color: #0077ff;
-    border-color: #0077ff;
-    color: black;
+    background-color: #010452;
+    border-color: #010452;
+    color: white;
     transition: 0.5s;
     cursor: pointer;
 }
 
 button:not(hover){
-    background-color: #010452;
-    border-color: #010452;
+    background-color: #0077ff;
+    border-color: #0077ff;
     transition: 0.5s;
 }
 

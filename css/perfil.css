@@ -75,21 +75,12 @@ body{
 
 .container-item h1{
     font-size: 40px;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .container-item h2{
     margin-top: -10px;
     font-size: 20px;
-    font-style: bold;
-}
-
-.container-item p{
-    margin-top: -5px;
-    font-size: 20px;
-    width: 350px;
-    font-style: bold;
-    text-align: justify;
 }
 
 .container-item .container-buttons{

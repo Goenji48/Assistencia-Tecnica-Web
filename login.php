@@ -76,7 +76,7 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         </div>
     <div class="form-container sign-in-container">
        <div class="voltar">
-            <a href="index.html">Voltar</a>
+            <a href="index.php">Voltar</a>
         </div> 
         <form action="" method="POST">
             <h1>Login</h1>
@@ -88,7 +88,7 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
            <!-- <span>Ou Use Sua Conta</span> -->
             <input type="email" placeholder="Email" name="email_user" maxlength="100"/>
             <input type="password" placeholder="Password" name="password_user" maxlength="50"/>
-            <a href="#" id="esqueceusenha">Esqueceu Sua Senha?</a>
+            <a href="recuperacaoSenha.html" id="esqueceusenha">Esqueceu Sua Senha?</a>
             <button id="logar" type="submit">Logar</button>
         </form>
     </div>
