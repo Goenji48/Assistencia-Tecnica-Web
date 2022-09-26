@@ -96,7 +96,6 @@ body{
     margin: 30px;
     box-shadow: 1px 1px 30px rgb(160, 151, 192);
     border-radius: 100px;
-    cursor: pointer;
 }
 
 .container-item .container-buttons .button-1{
@@ -108,9 +107,15 @@ body{
     flex-direction: column;
 }
 
-.container-item .container-buttons .button-1 img{
+.container-item .container-buttons .button-1 img:not(hover){
     width: 100px;
     height: 100px;
+    transition: 0.5s;
+}
+
+.container-item .container-buttons .button-1:hover{
+    filter: saturate(0%);
+    transition: 0.5s;
 }
 
 .container-item .container-buttons .button-2{
@@ -120,9 +125,14 @@ body{
     flex-direction: column;
 }
 
-.container-item .container-buttons .button-2 img{
+.container-item .container-buttons .button-2 img:not(hover){
     width: 100px;
     height: 100px;
+}
+
+.container-item .container-buttons .button-2 img:hover{
+    filter: saturate(0%);
+    transition: 0.5s;
 }
 
 .container-item .container-buttons h1{

@@ -16,35 +16,41 @@ if(isset($_POST['email-input'])){
         $email1 = $_POST['email-input'];
         //header("Location: php/sendEmail.php");
     }
+
+    try{
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'tccassistenciatecnica@gmail.com';
+        $mail->Password = 'xintzpkaxgabmrro';
+        $mail->Port = 587;
+    
+        $mail->setFrom('tccassistenciatecnica@gmail.com');
+        if(isset($email1)){
+            $mail->addAddress($email1);
+            $mail->isHTML(true);
+            $mail->Subject = "Recuperação de Senha - TCC Assistência Técnica Web";
+            $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.php'>Recuperar Senha</a>";
+            $mail->AltBody = "Você Solicitou uma recuperação de senha no nosso site, Clique nesse link para trocar a senha";
+    
+        if($mail->send()){
+            if(!isset($_SESSION)){
+                session_start();
+            }
+            $_SESSION['email'] = $email1; 
+            echo 'Email enviado com Sucesso, Verifique se recebeu o email para efetuar a troca de senha. <br> Caso não apareça, Verifique no Spam...';
+        } else {
+            echo 'Email nao enviado';
+        }
+    }
+    
+    } catch (Exception $e){
+        echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
+    }
+        
 }
 
-try{
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'tccassistenciatecnica@gmail.com';
-    $mail->Password = 'xintzpkaxgabmrro';
-    $mail->Port = 587;
-
-    $mail->setFrom('tccassistenciatecnica@gmail.com');
-    if(isset($email1)){
-        $mail->addAddress($email1);
-        $mail->isHTML(true);
-        $mail->Subject = "Recuperação de Senha - TCC Assistência Técnica Web";
-        $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.php'>Recuperar Senha</a>";
-        $mail->AltBody = "Você Solicitou uma recuperação de senha no nosso site, Clique nesse link para trocar a senha";
-
-    if($mail->send()){
-        echo 'Email enviado com Sucesso, Verifique se recebeu o email para efetuar a troca de senha.';
-    } else {
-        echo 'Email nao enviado';
-    }
-    }
-
-} catch (Exception $e){
-    echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
-}
 ?>
 
 
@@ -61,7 +67,9 @@ try{
 </head>
 <body>
     <div class="container">
-        <img src="img/arrow_back_icon_151627.png" alt="Botão de Voltar" id="backButton" onclick="backToHome()">
+        <div class="back-container">
+        <img src="img/arrow_back_icon_151627.png" alt="Botão de Voltar" id="backButton" onclick="backToLogin()">
+        </div>
         <h1>Recuperação de Senha</h1>
         <h2>Digite seu Email</h2>
         <form action="" method="POST" target="">

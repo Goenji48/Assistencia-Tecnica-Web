@@ -99,21 +99,24 @@ include("./php/protect_login.php");
 
 					<h3>O que há de novo?</h3>
 					<ul class="sem-marcador sem-padding noticias">
+					<li style="margin-bottom: 20px;">
 							<img src="img/laptop-repair.jpg" class="width-image">
 							<h4>Consertamos notebook!</h4>
-							<p>Está disponivel no nosso site reparos para notebooks e macbooks também.</p><a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
+							<p>Está disponivel no nosso site reparos para notebooks e macbooks também.</p>
+							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 						</li>
-							<li style="margin-bottom: 20px;">
+							<li style="margin-bottom: 20px;">	
 							<img src="img/computer-repair-services.jpg" class="width-image">
 							<h4>Nosso orçamento é sem custo!</h4>
-							<p>E sem compromisso, ou seja, qualquer pagamento só será devido se o consumidor aprovar o orçamento e autorizar o serviço.</p><a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
+							<p>E sem compromisso, ou seja, qualquer pagamento só será devido se o consumidor aprovar o orçamento e autorizar o serviço.</p>
+							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 						</li>
 							<li style="margin-bottom: 20px;">
 							<img src="img/assistencia-tecnica-celular-1-825x510.jpg" class="width-image">
 							<h4>A partir de agora nós conserta Smartphones e Tablets!</h4>
-							<p>Com novos estudos e ao longo da evolução da empresa, a partir de hoje ofereçemos reparos de smartphones e tablets.</p><a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
+							<p>Com novos estudos e ao longo da evolução da empresa, a partir de hoje ofereçemos reparos de smartphones e tablets.</p>
+							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 							</li>
-						</li>
 					</ul>
 				</div>
 			</div>

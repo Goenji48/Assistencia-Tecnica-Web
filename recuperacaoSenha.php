@@ -1,5 +1,4 @@
 <?php
-
 include("php/connection.php");
 
 if(isset($_POST['newPassword']) ||
@@ -14,6 +13,7 @@ if(isset($_POST['newPassword']) ||
         $newConfirmPassword = $mysqli->real_escape_string($_POST['newConfirmPassword']);
 
         //Arrumar depois;
+        $email1 = $_SESSION['email'];
 
         $query = "UPDATE Cliente SET senha = '$newPassword' WHERE email = '$email1' ";
 
@@ -33,7 +33,7 @@ if(isset($_POST['newPassword']) ||
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -1,5 +1,6 @@
 <?php
 include("php/connection.php");
+include("php/protect_login.php");
 
 if(isset($_POST['email_user']) || isset($_POST['password_user'])){
     if(strlen($_POST['email_user']) == 0){
