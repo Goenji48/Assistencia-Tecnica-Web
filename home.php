@@ -37,10 +37,10 @@ if(isset($_SESSION)){
 					<div class="coluna col10">
 						<nav>
 							<!-- barra de navegação do site -->
-								<a href="index.html" class="btn4 alinhamento">Home</a>
+								<a href="home.php" class="btn4 alinhamento">Home</a>
 								<a href="agendamento.php" class="btn4 alinhamento">Agendamentos<a>
-								<a href="servico.html" class="btn4 alinhamento">Serviço</a>
-								<a href="sobre.html" class="btn4 alinhamento">Sobre</a>
+								<a href="servico.php" class="btn4 alinhamento">Serviço</a>
+								<a href="sobre.php" class="btn4 alinhamento">Sobre</a>
 								<a href="perfil.php" class="btn4 alinhamento" id="loginNome">Perfil</a>
 						</nav>
 					</div>

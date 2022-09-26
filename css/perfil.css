@@ -129,6 +129,7 @@ body{
 .container-item .container-buttons .button-2 img:not(hover){
     width: 100px;
     height: 100px;
+    transition: 0.5;
 }
 
 .container-item .container-buttons .button-2 img:hover{

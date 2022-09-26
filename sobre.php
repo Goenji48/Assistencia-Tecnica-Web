@@ -19,7 +19,7 @@
         <div class="about-texts">
             <h1>Sobre</h1>
             <p>A Empresa surgiu com a proposta de consertar ou reparar aquele computador que foi molhado, parou de funcionar e o cliente não saber o que fazer, não querer comprar outro equipamento novo que saíra muito mais caro, nós estamos aqui para resolver os seus problemas da melhor maneira possível. Estamos precisando de um sistema para receber todos os nossos clientes.</p>
-            <button onclick="backToIndex()">Voltar</button>
+            <button onclick="backToHome()">Voltar</button>
         </div>
     </div>
 </body>
