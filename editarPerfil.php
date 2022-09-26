@@ -45,7 +45,7 @@ isset($_POST['password-input'])) {
 <body>
     <div class="main-container">
         <div class="container">
-            <img src="img/arrow_back_icon_151627.png" alt="Botao de Voltar" id="backButton" onclick="backToLogin()">
+            <img src="img/arrow_back_icon_151627.png" alt="Botao de Voltar" id="backButton" onclick="backToProfile()">
             <img src="img/user.png" alt="Foto de Perfil" id="user-icon">
             <h1><?php $username = $_SESSION['username']; echo $username; ?></h1>
             <h2><?php $name = $_SESSION['name']; echo $name; ?></h2>

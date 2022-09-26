@@ -115,6 +115,7 @@ body{
 
 .container-item .container-buttons .button-1:hover{
     filter: saturate(0%);
+    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -132,6 +133,7 @@ body{
 
 .container-item .container-buttons .button-2 img:hover{
     filter: saturate(0%);
+    cursor: pointer;
     transition: 0.5s;
 }
 
