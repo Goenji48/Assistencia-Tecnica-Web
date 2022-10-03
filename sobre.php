@@ -18,7 +18,8 @@
         </div>
         <div class="about-texts">
             <h1>Sobre</h1>
-            <p>A Empresa surgiu com a proposta de consertar ou reparar aquele computador que foi molhado, parou de funcionar e o cliente não saber o que fazer, não querer comprar outro equipamento novo que saíra muito mais caro, nós estamos aqui para resolver os seus problemas da melhor maneira possível. Estamos precisando de um sistema para receber todos os nossos clientes.</p>
+            <p>A empresa visa reparar aquele computador que foi danificado ou inutilizado das mais diversas maneiras, desde equipamentos que tiveram contato com água, aos que sofreram algum tipo de queda ou curto-circuito, a empresa também oferece serviço de limpeza e troca de componentes.</p>
+            <p>O principal objetivo da empresa é trazer um serviço 100% prático e confiável, sem uso abusivo de preços</p>
             <button onclick="backToHome()">Voltar</button>
         </div>
     </div>

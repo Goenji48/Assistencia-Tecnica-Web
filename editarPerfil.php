@@ -19,7 +19,7 @@ isset($_POST['password-input'])) {
         $query = "UPDATE Cliente SET nome = '$name', usernome = '$username', senha = '$password' WHERE idCliente = '$sessionId' ";
 
         if($mysqli->query($query)){
-            echo "Conta Atualizada com Sucesso";
+            echo "Conta Atualizada com Sucesso, Reloge para mostrar a conta atualizada.";
         } else {
             echo "Algo deu Errado " + $mysqli->error;
         }

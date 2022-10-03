@@ -17,8 +17,6 @@ $result2  = $mysqli->query($query2) or die("Erro na execução do Código: " + $
 
 $result3  = $mysqli->query($query3) or die("Erro na execução do Código: " + $mysqli->error);
 
-
-
 while($row = mysqli_fetch_array($result)){
     $nomeCliente = $row['nomeCliente'];
     $dia = $row['dia'];
