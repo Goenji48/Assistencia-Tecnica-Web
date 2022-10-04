@@ -80,8 +80,8 @@ if(isset($_SESSION)){
 				<div class="video-home">
 					<iframe width="600" height="400" src="https://www.youtube.com/embed/VkXH-www2M8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-					<p>Nós somos uma equipe especializados em reparos de equipamentos defeituosos. 
-						Clique aqui para mais informações do que a empresa oferece nos reparos:</p>
+					<p>Nós somos uma equipe especializada em reparo dos mais diversos eletrônicos com problemas.
+						 Para mais informações do que a empresa pode oferecer va até a página de serviço clicando em "ME LEVE ATÉ LÁ"</p>
 					<a href="servico.html" class="btnBlue button-border button">Me Leve Até La &raquo;</a>
 
 				</div>
@@ -90,9 +90,9 @@ if(isset($_SESSION)){
 			<div class="linha">
 				<div class="coluna col7 float content-background content-border">
 					<section>
-						<h2>Como um site pode ajudar uma empresa?</h2>
-						<p>O Site pode ajudar uma empresa, oferecendo facil e rapido agendamento para o reparo dos equipamentos.</p>
-						<p>É muito simples, apenas nos forneça o equipamento que precisa reparar e agende.</p>
+						<h2>Como o site pode ajudar a empresa</h2>
+						<p>O site pode ajudar uma empresa, oferecendo agendamento de forma rápida e prática, para o reparo dos esquipamentos.</p>
+						<p>É Muito facil, apenas nos forneça os equipamentos que necessitam de reparo e faremos a manutenção de forma segura e prática.</p>
 						<img src="img/repair-services.jpg" class="width-image">
 						
 					</section>
@@ -105,20 +105,20 @@ if(isset($_SESSION)){
 					<ul class="sem-marcador sem-padding noticias">
 					<li style="margin-bottom: 20px;">
 							<img src="img/laptop-repair.jpg" class="width-image">
-							<h4>Consertamos notebook!</h4>
-							<p>Está disponivel no nosso site reparos para notebooks e macbooks também.</p>
+							<h4>Consertamos notebooks</h4>
+							<p>Está disponível no nosso site reparos para notebooks de todas as marcas.</p>
 							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 						</li>
 							<li style="margin-bottom: 20px;">	
 							<img src="img/computer-repair-services.jpg" class="width-image">
 							<h4>Nosso orçamento é sem custo!</h4>
-							<p>E sem compromisso, ou seja, qualquer pagamento só será devido se o consumidor aprovar o orçamento e autorizar o serviço.</p>
+							<p>Envie sua máquina e faremos um apuramento 100% gratuito e rápido.</p>
 							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 						</li>
 							<li style="margin-bottom: 20px;">
 							<img src="img/assistencia-tecnica-celular-1-825x510.jpg" class="width-image">
-							<h4>A partir de agora nós conserta Smartphones e Tablets!</h4>
-							<p>Com novos estudos e ao longo da evolução da empresa, a partir de hoje ofereçemos reparos de smartphones e tablets.</p>
+							<h4>A partir de agora nós consertamos Smartphones e Tablets!</h4>
+							<p>Realizamos reparos de Smartphones e Tablets sem nenhum custo adicional, independente do modelo ou de sua geração.</p>
 							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 							</li>
 					</ul>

@@ -43,27 +43,27 @@
         <div class="container" onmouseenter="showDetailsComputer()" onmouseleave="exitDetailsContainer()">
             <h1 >Computadores</h1>
             <img src="img/desktop-256.png" />
-            <p>Nós consertamos diversos componentes de computadores como Placa Mãe, Placa de Vídeo, Fontes e outros, para mais detalhes clique aqui</p></div>
+            <p>Nós reparamos diferentes componentes de computadores seja placa mãe, placa de video, fonte além da substituição de peças, Para mais detalhes clique aqui.</p></div>
         <div class="container" onmouseenter="showDetailsNotebook()" onmouseleave="exitDetailsContainer()">
             <h1>Notebook</h1>
             <img src="img/laptop.png" alt="">
-            <p>Em notebooks fizemos reparos ou uma limpeza preventida do equipamento, para ver mais clique aqui</p></div>
+            <p>Realizamos a substituição de peças, além de uma limpeza preventiva do equipamento, Para mais detalhes clique aqui.</p></div>
         <div class="container" onmouseenter="showDetailsCelulares()" onmouseleave="exitDetailsContainer()">
             <h1>Celulares</h1>
             <img src="img/kindpng_4421026.png" alt="" id="phone-icon"/>
-            <p>Realizamos a troca de diversos componentes como Tela, Bateria, Acessórios e outros e além disso dependendo da situação do equipamento, fizemos reparos em placa lógica do aparelho</p></div>
+            <p>Realizamos a troca de vários componentes seja a tela, bateria, touch e outros, e em certos casos é possivel realizar o reparo de seus componentes. Para mais detalhes de clique aqui.</p></div>
     </div>
     <div class="card1">
         <div class="container" onmouseenter="showDetailsTelevisores()" onmouseleave="exitDetailsContainer()"><h1>Televisores</h1>
             <img src="img/tv-256.png" alt="">
-            <p>Nas TVs realizamos reparos em placas lógicas, troca do painel de led, reparo nas fontes de alimentação e etc, para saber mais clique aqui</p></div>
+            <p>Realizamos reparos nas placas lógicas e também em fonte de alimentações, trocamos o painel de led, fazemos a limpeza entre outros... Para saber mais clique aqui.</p></div>
         <div class="container" onmouseenter="showDetailsTablet()" onmouseleave="exitDetailsContainer()"><h1>Tablets</h1>
             <img src="img/tablet-256.png" alt="">
-            <p>Mesma descrição dos celulares se aplicam aos tablets mas com propósitos diferentes, clique aqui para mais
+            <p>Realizamos a troca de vários componentes seja a tela, bateria, touch e outros, e em certos casos é possível realizar o reparo de seus componentes. Para mais detalhes clique aqui.
             </p></div>
             <div class="container" onmouseenter="showDetailsEletrodomesticos()" onmouseleave="exitDetailsContainer()"><h1>Eletrodomésticos</h1>
                 <img src="img/microwave-icon.png" alt="">
-                <p>Em Eletrodomésticos consertamos alguns aparelhos como Geladeira, Microondas e outros</p></div>
+                <p>Realizamos reparos em eletrodomésticos de última geração sejam eles, geladeiras, microondas, fogões, máquinas de lavar entre outros. Para mais detalhes clique aqui</p></div>
     </div>
     <div class="popup-container" id="container">
         <div class="popup-left" id="popup-left-background">
