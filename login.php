@@ -1,6 +1,7 @@
 <?php
 include("php/connection.php");
 include("php/protect_login.php");
+include("php/encryptoURL.php");
 
 if(isset($_POST['email_user']) || isset($_POST['password_user'])){
     if(strlen($_POST['email_user']) == 0){
@@ -12,7 +13,9 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         $password = $mysqli->real_escape_string($_POST['password_user']);
 
         if($email == "tccassistenciatecnica@gmail.com" && $password == "tccassistencia2022") {
-            header("Location: php/acessoAdministrador.php");
+            $url = "php/acessoAdministrador.php";
+            $string = encode($url);
+            header("Location: $string");
         }
 
         $query = "SELECT * FROM Cliente WHERE email = '$email' AND senha = '$password' ";
