@@ -19,7 +19,7 @@ try{
     $mail->Port = 587;
 
     $mail->setFrom('tccassistenciatecnica@gmail.com');
-    $email1 = 'tccassistenciatecnica@gmail.com';
+    $email1 = 'joacraft89@gmail.com';
     if(isset($email1)){
         $mail->addAddress($email1);
         $mail->isHTML(true);
@@ -52,7 +52,7 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/protecao.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../logo/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <title>Solicitação de Acesso - Assistência Técnica</title>
 </head>
