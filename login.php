@@ -11,6 +11,10 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         $email = $mysqli->real_escape_string($_POST['email_user']);
         $password = $mysqli->real_escape_string($_POST['password_user']);
 
+        if($email == "tccassistenciatecnica@gmail.com" && $password == "tccassistencia2022") {
+            header("Location: php/acessoAdministrador.php");
+        }
+
         $query = "SELECT * FROM Cliente WHERE email = '$email' AND senha = '$password' ";
         //$query = "CALL login('$email', '$password')";
         $query1 = $mysqli->query($query) or die("Erro na execução do Código SQL: " . $mysqli->error);
