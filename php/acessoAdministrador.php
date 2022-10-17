@@ -24,7 +24,7 @@ try{
         $mail->addAddress($email1);
         $mail->isHTML(true);
         $mail->Subject = "Pedido de Solicitação para Acesso ao Administrador";
-        $mail->Body = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar <a href='http://tccassistencia.herokuapp.com/administrador.html'>Administrador</a>";
+        $mail->Body = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar <a href='http://tccassistencia.herokuapp.com/administrador.php'>Administrador</a>";
         $mail->AltBody = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar";
 
     if($mail->send()){
