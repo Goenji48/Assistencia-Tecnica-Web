@@ -9,6 +9,11 @@ body{
     height: 100vh;
 }
 
+text{
+    color: white;
+    font-size: 50px;
+}
+
 a:not(hover){
     color: gray;
     transition: 0.5s;

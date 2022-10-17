@@ -28,14 +28,14 @@ try{
         $mail->Subject = "Pedido de Solicitação para Acesso ao Administrador";
         $url = "https://tccassistencia.herokuapp.com/administrador.php";
         $string = encode($url);
-        $mail->Body = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar <a href='$string'>Administrador</a>";
+        $mail->Body = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar <a href='$string')>Administrador</a>";
         $mail->AltBody = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar";
 
     if($mail->send()){
         if(!isset($_SESSION)){
             session_start();
         }
-        $_SESSION['email_administrador'] = $email1; 
+        $_SESSION['email_administrador'] = $email1;
         echo 'Email enviado com Sucesso, Verifique se recebeu o email para acessar a página de administrador. <br> Caso não apareça, Verifique no Spam...';
     } else {
         echo 'Email nao enviado';
@@ -56,12 +56,13 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/protecao.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="../javascript/verifyEmail.js" defer></script>
     <link rel="shortcut icon" href="../logo/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <title>Solicitação de Acesso - Assistência Técnica</title>
 </head>
 <body>
-    <h1>Você Solicitou o Acesso à página de Administrador</h1>
-    <p>Verifique o email para poder acessar</p>
+    <!--<h1>Você Solicitou o Acesso à página de Administrador</h1>
+    <p>Verifique o email para poder acessar</p>-->
 </body>
 </html>
