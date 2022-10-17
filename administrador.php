@@ -1,6 +1,7 @@
 <?php
 include("php/protect_administrador.php");
 include("php/connection.php");
+include("php/encryptoURL.php");
 
 $query = "SELECT * FROM Cliente";
 
@@ -56,7 +57,6 @@ if(isset($_POST['idNumber'])){
                 } else {
                     die($mysqli->error);
                 }
-
             }
         }
     }
@@ -85,7 +85,10 @@ if(isset($_POST['idNumber'])){
             <h1>Administração</h1>
             <div class="server-state">
                 <h2>Clientes Cadastrados: <?php echo $row ?></h2>
-                <h2>Ver Tabela do Banco <a href="php/databaseClienteTable.php" target="_blank">Database</a></h2>
+                <h2>Ver Tabela do Banco <a href="<?php
+                $url = "php/databaseClienteTable.php";
+                echo encode($url);
+                ?>" target="_blank">Database</a></h2>
             </div>
         </div>
         <div class="container-options">
