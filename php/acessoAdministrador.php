@@ -3,6 +3,7 @@ require_once("PHPMailer.php");
 require_once("SMTP.php");
 require_once("Exception.php");
 include("encryptoURL.php");
+include("mail.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -26,19 +27,15 @@ try{
         $mail->isHTML(true);
         $mail->setLanguage('pt');
         $mail->Subject = "Pedido de Solicitação para Acesso ao Administrador";
-        $url = "https://tccassistencia.herokuapp.com/administrador.php";
+        $url = "./checkEmailAdmin.php";
         $string = encode($url);
-        $mail->Body = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar <a href='$string')>Administrador</a>";
-        $mail->AltBody = "Você Solicitou acesso à página de adminstrador br> Clique nesse link para acessar";
+        $mail->Body = "Você Solicitou acesso à página de adminstrador <br> Clique nesse link para acessar <a href='$string')>Administrador</a>";
+        $mail->AltBody = "Você Solicitou acesso à página de adminstrador <br> Clique nesse link para acessar";
 
     if($mail->send()){
-        if(!isset($_SESSION)){
-            session_start();
-        }
-        $_SESSION['email_administrador'] = $email1;
         echo 'Email enviado com Sucesso, Verifique se recebeu o email para acessar a página de administrador. <br> Caso não apareça, Verifique no Spam...';
     } else {
-        echo 'Email nao enviado';
+        echo 'Email não enviado';
     }
 }
 
