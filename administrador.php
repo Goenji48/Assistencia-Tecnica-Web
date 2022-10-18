@@ -1,5 +1,5 @@
 <?php
-include("php/protect_administrador.php");
+
 include("php/connection.php");
 include("php/encryptoURL.php");
 
@@ -42,25 +42,24 @@ if(isset($_POST['idNumber'])){
             $equipamentId = $equipament['idEquipamento'];
         }
     }
+}
 
-    if(isset($equipamentId) && isset($userId)){
-        if(isset($_POST['value']) && isset($_POST['data'])){
-            if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
-                echo "Preencha o campo ID antes de Realizar o Orçamento";
+if(isset($equipamentId) && isset($userId)){
+    if(isset($_POST['value']) && isset($_POST['data'])){
+        if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
+            echo "Preencha o campo ID antes de Realizar o Orçamento";
+        } else {
+            $price = $mysqli->real_escape_string($_POST['value']);
+            $data = $mysqli->real_escape_string($_POST['data']);
+            $query_service = "INSERT INTO Servico VALUES(idServico, '$equipamentId', '$userId', '$price', '$data')";
+    
+            if($mysqli->query($query_service)){
+                echo "Orçamento Realizado com Sucesso";
             } else {
-                $price = $mysqli->real_escape_string($_POST['value']);
-                $data = $mysqli->real_escape_string($_POST['data']);
-                $query_service = "INSERT INTO Servico VALUES(idServico, '$equipamentId', '$userId', '$price', '$data')";
-        
-                if($mysqli->query($query_service)){
-                    echo "Orçamento Realizado com Sucesso";
-                } else {
-                    die($mysqli->error);
-                }
+                die($mysqli->error);
             }
         }
     }
-
 }
 
 ?>

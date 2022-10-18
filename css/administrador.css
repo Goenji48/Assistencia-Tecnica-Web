@@ -84,6 +84,7 @@ text{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 900px;
+    color: white;
     min-height: 500px;
     flex-direction: row;
     background-image: linear-gradient(to left, rgba(59,173,227,1), 
