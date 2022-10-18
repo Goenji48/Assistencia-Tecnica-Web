@@ -27,7 +27,7 @@ try{
         $mail->isHTML(true);
         $mail->setLanguage('pt');
         $mail->Subject = "Pedido de Solicitação para Acesso ao Administrador";
-        $url = "./checkEmailAdmin.php";
+        $url = "https://tccassistencia.herokuapp.com/php/checkEmailAdmin.php";
         $string = encode($url);
         $mail->Body = "Você Solicitou acesso à página de adminstrador <br> Clique nesse link para acessar <a href='$string')>Administrador</a>";
         $mail->AltBody = "Você Solicitou acesso à página de adminstrador <br> Clique nesse link para acessar";
