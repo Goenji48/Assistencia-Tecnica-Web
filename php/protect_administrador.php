@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
     session_start();
 }
 
-if(!isset($_SESSION['email_administrador'])){
+if(!isset($_SESSION['email_administrador']) || !$_SERVER['REQUEST_URI'] == "/php/checkEmailAdmin.php?url=aHR0cHM6Ly90Y2Nhc3Npc3RlbmNpYS5oZXJva3VhcHAuY29tL3BocC9jaGVja0VtYWlsQWRtaW4ucGhw"){
      header("Location: ./protecao_administrador.html");
 }
 
