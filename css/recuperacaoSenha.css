@@ -1,8 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url("../img/password_background.jpg");
-    background-size: 1920px 1080px;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
