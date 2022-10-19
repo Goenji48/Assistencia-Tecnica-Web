@@ -1,5 +1,6 @@
 <?php
 include("php/connection.php");
+include("php/protect_recuperacaoSenha.php");
 
 if(isset($_POST['newPassword']) ||
   isset($_POST['newConfirmPassword'])) {
