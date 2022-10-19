@@ -37,8 +37,8 @@ include("php/connection.php");
                 <a href="php/logout.php">Sair</a>
                 <div class="container-buttons">
                     <div class="button-1">
-                        <img src="img/schedule_icon.png" alt="Ver Agendamentos" onclick="openSchedulePage()" />
-                        <h1>Ver Agendamentos</h1>
+                        <img src="img/schedule_icon.png" alt="Ver Agendamento" onclick="openSchedulePage()" />
+                        <h1>Ver Agendamento</h1>
                     </div>
                         <div class="button-2">
                             <img src="img/profile_edit_icon.png" alt="Editar Perfil" onclick="openProfileEdit()" />

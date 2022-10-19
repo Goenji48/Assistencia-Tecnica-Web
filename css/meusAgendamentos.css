@@ -2,16 +2,12 @@ body{
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
     margin: auto;
     background-image: url("../img/pcb_wallpaper2.jpg");
     background-size: cover;   
-}
-
-.col12{
-    
 }
 
 text{
@@ -26,7 +22,7 @@ table{
     table-layout: fixed;
     height: 300px;
     overflow-x: auto;
-    margin-top: 0px;
+    margin: auto;
     border: 1px solid white;
     background-color: rgba(0,0,0,0.7);
 }
@@ -54,7 +50,6 @@ th{
     width: 100%;
     display: flex;
     align-items: center;
-    align-self: flex-start;
     justify-content: center;
 	background-color: #170940;
 }

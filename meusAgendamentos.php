@@ -11,6 +11,8 @@ $query2 = "SELECT * FROM Equipamento where idCliente = '$idCliente' ";
 
 $query3 = "SELECT * FROM Servico where idCliente = '$idCliente' ";
 
+$query4 = "SELECT * FROM Envio where idCliente = '$idCliente' ";
+
 $result  = $mysqli->query($query) or die("Erro na execução do Código: " + $mysqli->error);
 
 $result2  = $mysqli->query($query2) or die("Erro na execução do Código: " + $mysqli->error);
@@ -33,6 +35,11 @@ while($row3 = mysqli_fetch_array($result3)){
         $valor = $row3['valor'];
     } else {
         $valor = "R$ 0,00";
+    }
+    if(isset($row3['dataTermino'])){
+        $dateFinish = $row3['dataTermino'];
+    } else {
+        $dateFinish = "Aguarde...";
     }
 }
 
@@ -71,6 +78,7 @@ while($row3 = mysqli_fetch_array($result3)){
             <th>Dia</th>
             <th>Hora</th>
             <th>Orçamento</th>
+            <th>Data Reparo</th>
             <th>Envio</th>
         </tr>
         <tr>
@@ -86,7 +94,7 @@ while($row3 = mysqli_fetch_array($result3)){
              } else{
                 echo "0";
              } ?></td>
-            <td></td>
+            <td> <?php echo $dateFinish ?></td>
         </tr>
     </table>
     <div class="footer">
