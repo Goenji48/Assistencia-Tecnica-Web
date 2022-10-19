@@ -72,14 +72,15 @@ if(isset($_SESSION)){
 			</section>
 				<div class="coluna col9 float content-background content-border">
 					<h2>AS: <em>O que a empresa pode oferecer?</em></h2>
-					<p>Vídeo Introdução da empresa:</p>
+					<p>Imagem mostrando uns dos serviços da empresa</p>
 					<!--<img src="img/repair-services.jpg" alt="" class="width-image" />-->
 
 					<!-- link do video -->
 
-				<div class="video-home">
+				<!--<div class="video-home">
 					<iframe width="600" height="400" src="https://www.youtube.com/embed/VkXH-www2M8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
+				</div>-->
+				<img src="img/artiom-vallat-H-qqp_Eqaww-unsplash.jpg" alt="Gaming PC" id="homeImage">
 					<p>Nós somos uma equipe especializada em reparo dos mais diversos eletrônicos com problemas.
 						 Para mais informações do que a empresa pode oferecer va até a página de serviço clicando em "ME LEVE ATÉ LÁ"</p>
 					<a href="servico.html" class="btnBlue button-border button">Me Leve Até La &raquo;</a>

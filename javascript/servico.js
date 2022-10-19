@@ -13,7 +13,6 @@ function showDetailsComputer(){
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "45%"
     popup_container.style.visibility = "visible"
@@ -44,7 +43,6 @@ function showDetailsNotebook(){
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "40%"
     popup_container.style.visibility = "visible"
@@ -71,7 +69,6 @@ function showDetailsCelulares(){
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "50%"
     popup_container.style.left = "30%"
     popup_container.style.visibility = "visible"
@@ -99,7 +96,6 @@ function showDetailsTelevisores(){
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "45%"
     popup_container.style.visibility = "visible"
@@ -124,7 +120,6 @@ function showDetailsTablet(){
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "40%"
     popup_container.style.visibility = "visible"
@@ -151,7 +146,6 @@ function showDetailsEletrodomesticos() {
     card1.style.filter = "blur(20px)"
     header_html.style.filter = "blur(20px)"
     footer_html.style.filter = "blur(20px)"
-    popup_container.style.opacity = 100
     popup_container.style.top = "55%"
     popup_container.style.left = "30%"
     popup_container.style.visibility = "visible"
@@ -171,7 +165,6 @@ function showDetailsEletrodomesticos() {
 }
 
 function exitDetailsContainer(){
-    popup_container.style.opacity = 0
     popup_container.style.translate = "scaleX(0)"
     popup_container.style.translate = "scaleY(0)"
     popup_container.style.left = "50%"
