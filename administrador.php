@@ -1,5 +1,5 @@
 <?php
-include("php/protect_administrador.php");
+//include("php/protect_administrador.php");
 include("php/connection.php");
 include("php/encryptoURL.php");
 
@@ -9,44 +9,49 @@ $query1 = $mysqli->query($query);
 
 $row = $query1->num_rows;
 
-if(isset($_POST['idNumber'])){
-    if(strlen($_POST['idNumber']) == 0){
-        echo "Insira o ID";
-    } else {
-        $id = $mysqli->real_escape_string($_POST['idNumber']);
-        $query3 = "SELECT * from Cliente where idCliente = '$id' ";
-
-        $query4 = $mysqli->query($query3) or die($mysqli->error);
-
-        $row = $query4->num_rows;
-
-        $all_rows = $query4->num_rows;
-
-        if($row == 1){
-            $user = $query4->fetch_assoc();
-            $name = $user['nome'];
-            $email = $user['email'];
-            $_SESSION['id'] = $user['idCliente'];
-        }
-
-        $query_equipament = "SELECT * FROM Equipamento where idCliente = '$id' ";
-
-        $equipament_result = $mysqli->query($query_equipament) or die($mysqli->error);
-
-        $equipament_rows = $equipament_result->num_rows;
-
-        if($equipament_rows == 1){
-            $equipament = $equipament_result->fetch_assoc();
-            $equipament_name = $equipament['nome'];
-            $equipament_problem = $equipament['descricao_defeito'];
-            $_SESSION['eid'] = $equipament['idEquipamento'];
+if(isset($_POST['search'])) {
+    if(isset($_POST['idNumber'])){
+        if(strlen($_POST['idNumber']) == 0){
+            echo "Insira o ID";
+        } else {
+            $id = $mysqli->real_escape_string($_POST['idNumber']);
+            $query3 = "SELECT * from Cliente where idCliente = '$id' ";
+    
+            $query4 = $mysqli->query($query3) or die($mysqli->error);
+    
+            $row = $query4->num_rows;
+    
+            $all_rows = $query4->num_rows;
+    
+            if(!isset($_SESSION)){
+                session_start();
+            }
+    
+            if($row == 1){
+                $user = $query4->fetch_assoc();
+                $name = $user['nome'];
+                $email = $user['email'];
+                $_SESSION['id'] = $user['idCliente'];
+            }
+    
+            $query_equipament = "SELECT * FROM Equipamento where idCliente = '$id' ";
+    
+            $equipament_result = $mysqli->query($query_equipament) or die($mysqli->error);
+    
+            $equipament_rows = $equipament_result->num_rows;
+    
+            if($equipament_rows == 1){
+                $equipament = $equipament_result->fetch_assoc();
+                $equipament_name = $equipament['nome'];
+                $equipament_problem = $equipament['descricao_defeito'];
+                $_SESSION['eid'] = $equipament['idEquipamento'];
+            }
         }
     }
 }
 
-
-if(isset($_POST['budget'])){
-    if(isset($_SESSION['eid']) || isset($_SESSION['id'])){
+if(isset($_POST['budget'])) {
+    if(isset($_SESSION['eid']) && isset($_SESSION['id'])){
         if(isset($_POST['value']) && isset($_POST['data'])){
             if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
                 echo "Preencha o campo ID antes de Realizar o Orçamento";
@@ -71,6 +76,7 @@ if(isset($_POST['budget'])){
         echo "ID Cliente e ID Equipamento não encontrados.";
     }
 }
+
 
 if(isset($_POST['send'])){
     if(isset($_SESSION['eid']) && isset($_SESSION['id']) && isset($_SESSION['serviceId'])) {
@@ -136,7 +142,7 @@ if(isset($_POST['send'])){
                 <h1>Preencher Orçamento</h1>
                 <h2>ID</h2>
                 <input type="number" name="idNumber">
-                <button type="submit">Buscar</button>
+                <input type="submit" name="search" class="buttons" value="Buscar">
             </form>
             <form action="" method="POST">
             <h1>Adicionar Valor</h1>
