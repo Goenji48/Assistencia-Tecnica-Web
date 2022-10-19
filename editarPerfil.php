@@ -26,6 +26,20 @@ isset($_POST['password-input'])) {
     }
 }
 
+if(isset($_POST['btnDelete'])){
+    $idUser = $_SESSION['id'];
+
+    $query = "DELETE FROM Cliente WHERE idCliente = '$idUser' ";
+
+    if($mysqli->query($query)){
+        echo "Conta Deletada Com Sucesso.";
+        header("Location: index.php");
+        session_destroy();
+    } else {
+        die($mysqli->error);
+    }
+}
+
 
 ?>
 
@@ -56,6 +70,7 @@ isset($_POST['password-input'])) {
                 <input type="text" placeholder="Alterar Nome de Usuário" name="username-input"/>
                 <input type="password" placeholder="Alterar Senha" name="password-input"/>
                 <button type="submit">Salvar Mudanças</button>
+                <input type="submit" name="btnDelete" value="Deletar Conta" id="btnDelete"/>
             </form>
         </div>
     </div>

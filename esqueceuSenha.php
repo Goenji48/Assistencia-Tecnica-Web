@@ -2,6 +2,7 @@
 require_once("php/PHPMailer.php");
 require_once("php/SMTP.php");
 require_once("php/Exception.php");
+include("php/encryptoURL.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -31,7 +32,9 @@ if(isset($_POST['email-input'])){
             $mail->addAddress($email1);
             $mail->isHTML(true);
             $mail->Subject = "Recuperação de Senha - TCC Assistência Técnica Web";
-            $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='http://tccassistencia.herokuapp.com/recuperacaoSenha.php'>Recuperar Senha</a>";
+            $url = "https://tccassistencia.herokuapp.com/php/checkEmailVerification.php";
+            $link = encode($url);
+            $mail->Body = "Você Solicitou uma recuperação de senha no nosso site <br> Clique nesse link para trocar a senha <a href='$link'>Recuperar Senha</a>";
             $mail->AltBody = "Você Solicitou uma recuperação de senha no nosso site, Clique nesse link para trocar a senha";
     
         if($mail->send()){

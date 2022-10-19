@@ -83,10 +83,10 @@ text{
     box-shadow: 1px 1px 10px black;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 900px;
+    min-width: 900px;
     color: white;
     min-height: 500px;
-    flex-direction: row;
+    flex-direction: column;
     background-image: linear-gradient(to left, rgba(59,173,227,1), 
     #171B4D);
 }
@@ -95,13 +95,30 @@ text{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 50px;
 }
 
+.options-1 form{
+    width: 300px;
+    min-height: 250px;
+    margin: 20px;
+}
+
 .options-1 input{
-    background-color: #eee;
-    border: none;
+    background-color: #303030;
+    color: #ddd;
+    border-color: #0077ff;
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 200px;
+}
+
+.options-1 select{
+    background-color: #303030;
+    color: #ddd;
+    border-color: #0077ff;
     padding: 12px 15px;
     margin: 8px 0;
     width: 200px;
@@ -134,9 +151,36 @@ text{
     transition: 0.5s;
 }
 
+.options-1 .buttons{
+    border-radius: 20px;
+    border: 1px solid #010452;
+    background-color: #010452;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.options-1 .buttons:hover{
+    background-color: #010452;
+    border-color: #010452;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.options-1 .buttons:not(hover){
+    background-color: #0077ff;
+    border-color: #0077ff;
+    transition: 0.5s;
+}
+
 .options-2{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     margin-left: 100px;

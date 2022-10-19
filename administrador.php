@@ -1,5 +1,5 @@
 <?php
-
+include("php/protect_administrador.php");
 include("php/connection.php");
 include("php/encryptoURL.php");
 
@@ -26,7 +26,7 @@ if(isset($_POST['idNumber'])){
             $user = $query4->fetch_assoc();
             $name = $user['nome'];
             $email = $user['email'];
-            $userId = $user['idCliente'];
+            $_SESSION['id'] = $user['idCliente'];
         }
 
         $query_equipament = "SELECT * FROM Equipamento where idCliente = '$id' ";
@@ -39,26 +39,66 @@ if(isset($_POST['idNumber'])){
             $equipament = $equipament_result->fetch_assoc();
             $equipament_name = $equipament['nome'];
             $equipament_problem = $equipament['descricao_defeito'];
-            $equipamentId = $equipament['idEquipamento'];
+            $_SESSION['eid'] = $equipament['idEquipamento'];
         }
     }
 }
 
-if(isset($equipamentId) && isset($userId)){
-    if(isset($_POST['value']) && isset($_POST['data'])){
-        if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
-            echo "Preencha o campo ID antes de Realizar o Orçamento";
-        } else {
-            $price = $mysqli->real_escape_string($_POST['value']);
-            $data = $mysqli->real_escape_string($_POST['data']);
-            $query_service = "INSERT INTO Servico VALUES(idServico, '$equipamentId', '$userId', '$price', '$data')";
-    
-            if($mysqli->query($query_service)){
-                echo "Orçamento Realizado com Sucesso";
+
+if(isset($_POST['budget'])){
+    if(isset($_SESSION['eid']) || isset($_SESSION['id'])){
+        if(isset($_POST['value']) && isset($_POST['data'])){
+            if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
+                echo "Preencha o campo ID antes de Realizar o Orçamento";
             } else {
-                die($mysqli->error);
+                $price = $mysqli->real_escape_string($_POST['value']);
+                $data = $mysqli->real_escape_string($_POST['data']);
+                $id = $_SESSION['id'];
+                $eid = $_SESSION['eid'];
+                $query_service = "INSERT INTO Servico VALUES(idServico, '$eid', '$id', '$price', '$data')";
+
+                $budget_result = $mysqli->query($query_service) or die($mysqli->error);
+
+                $rows = $budget_result->num_rows;
+
+                if($rows == 1){
+                    $bugdet = $budget_result->fetch_assoc();
+                    $_SESSION['serviceId'] = $budget['idServico'];
+                }
             }
         }
+    } else {
+        echo "ID Cliente e ID Equipamento não encontrados.";
+    }
+}
+
+if(isset($_POST['send'])){
+    if(isset($_SESSION['eid']) && isset($_SESSION['id']) && isset($_SESSION['serviceId'])) {
+        $type = $mysqli->real_escape_string($_POST['send']);
+        $id = $_SESSION['id'];
+        $eid = $_SESSION['eid'];
+        $serviceId = $_SESSION['serviceId'];
+
+        $query_user = "SELECT * from Cliente where idCliente = $id";
+
+        $user_result = $mysqli->query($query_user) or die($mysqli->error);
+
+        $rowsUser = $user_result->num_rows;
+
+        if($rowsUser == 1){
+            $user = $user_result->fetch_assoc();
+            $cep = $user['cep'];
+        }
+        
+        $query_send = "INSERT INTO Envio VALUES(idEnvio, '$type', '$eid', '$serviceId', '$cep' ";
+
+        if($mysqli->query($query_send)){
+            echo "Envio Registrado com Sucesso";
+        } else {
+            die($mysqli->error);
+        }
+    } else {
+        echo "ID Cliente, ID Equipamento e ID Servico não encontrados.";
     }
 }
 
@@ -97,10 +137,22 @@ if(isset($equipamentId) && isset($userId)){
                 <h2>ID</h2>
                 <input type="number" name="idNumber">
                 <button type="submit">Buscar</button>
-                <h2>Adicionar Valor</h2>
-                <h3>Valor: <input type="number" name="value"></h3>
+            </form>
+            <form action="" method="POST">
+            <h1>Adicionar Valor</h1>
+                <h3>Valor</h3>
+                <input type="number" name="value">
                 <input type="date" name="data">
-                <button type="submit">Aplicar</button>
+                <input type="submit" name="budget" class="buttons">
+            </form>
+            <form action="" method="POST">
+                <h1>Inserir Informações de Envio</h1>
+                <h3>Tipo do Envio</h3>
+                <select name="type" id="">
+                    <option value="Retirada">Retirada</option>
+                    <option value="SEDEX">SEDEX</option>
+                </select>
+                <input type="submit" name="send" class="buttons">
             </form>
             </div>
             <div class="options-2">

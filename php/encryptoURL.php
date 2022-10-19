@@ -7,6 +7,6 @@ function encode($url){
         $encode = base64_encode($url);
         $final = $url . $urlCripto . $encode;
         return $final;    
-}        
+} 
 
 ?>
