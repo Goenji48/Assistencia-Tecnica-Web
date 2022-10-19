@@ -476,7 +476,6 @@ label{
 
 p{
 	font-size: 14px;
-	text-shadow: 4px 4px 10px black;
 }
 
 iframe{
@@ -486,7 +485,6 @@ iframe{
 
 h1, h2, h3, h4, h5, h6{
 	border-radius: 10px;
-	text-shadow: 2px 2px 20px black;
 }
 
 img{

@@ -116,7 +116,6 @@ li{
     margin: 10px 5px;
     width: 400px;
     height: 400px;
-    box-shadow: 2px 2px 20px 2px black;
 }
 
 .popup-right{
@@ -127,7 +126,6 @@ li{
     min-width: 500px;
     margin-left: 100%;
     height: 400px;
-    box-shadow: 2px 2px 20px 2px black;
     text-align: justify;
     color: black;
     display: flex;

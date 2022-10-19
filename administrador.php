@@ -1,5 +1,5 @@
 <?php
-//include("php/protect_administrador.php");
+include("php/protect_administrador.php");
 include("php/connection.php");
 include("php/encryptoURL.php");
 
@@ -78,6 +78,7 @@ if(isset($_POST['budget'])) {
 }
 
 
+
 if(isset($_POST['send'])){
     if(isset($_SESSION['eid']) && isset($_SESSION['id']) && isset($_SESSION['serviceId'])) {
         $type = $mysqli->real_escape_string($_POST['send']);
@@ -149,7 +150,7 @@ if(isset($_POST['send'])){
                 <h3>Valor</h3>
                 <input type="number" name="value">
                 <input type="date" name="data">
-                <input type="submit" name="budget" class="buttons">
+                <input type="submit" name="budget" class="buttons" >
             </form>
             <form action="" method="POST">
                 <h1>Inserir Informações de Envio</h1>
