@@ -67,6 +67,12 @@ if(isset($_POST['budget'])) {
 
                 $budget_result = $mysqli->query($query_service) or die($mysqli->error);
 
+                if($budget_result == 1){
+                    echo "Orçamento Realizado com Sucesso!";
+                } else {
+                    die($mysqli->error);
+                }
+
                 $rows = $budget_result->num_rows;
 
                 if($rows == 1){
