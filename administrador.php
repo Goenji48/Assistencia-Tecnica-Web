@@ -48,10 +48,13 @@ if(isset($_POST['search'])) {
             }
         }
     }
+    $id = $_SESSION['id'];
+    $eid = $_SESSION['eid'];
+    printf("idUser: $id, idEquip: $eid ");
 }
 
 if(isset($_POST['budget'])) {
-    if(isset($_SESSION['eid']) && isset($_SESSION['id'])){
+    if(isset($_SESSION)) {
         if(isset($_POST['value']) && isset($_POST['data'])){
             if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
                 echo "Preencha o campo ID antes de Realizar o Orçamento";
@@ -150,7 +153,7 @@ if(isset($_POST['send'])){
                 <h3>Valor</h3>
                 <input type="number" name="value">
                 <input type="date" name="data">
-                <input type="submit" name="budget" class="buttons" >
+                <input type="submit" name="budget" class="buttons">
             </form>
             <form action="" method="POST">
                 <h1>Inserir Informações de Envio</h1>
