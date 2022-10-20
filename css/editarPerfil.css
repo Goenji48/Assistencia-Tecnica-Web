@@ -106,12 +106,21 @@ body{
     width: 400px;
     height: 25px;
     margin: 30px;
-    border: none;
     background-color: #030424;
+    border: 1px solid #0077ff;
     color: white;
     border-radius: 10px;
     padding: 12px 15px;
+    outline: none;
+    transition: 0.5s;
 }
+
+.container2 input:focus{
+    border-color: #0077ff;
+    box-shadow: 0 0 12px 0 #0077ff;
+    transition: 0.5s;
+}
+
 
 #backButton{
     width: 10%;

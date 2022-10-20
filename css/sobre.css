@@ -18,6 +18,7 @@ body{
         rgba(59,173,227,1) 100%
   );
     animation: bg 20s ease infinite;
+    transition: 1s;
 }
 
 @keyframes bg{
@@ -36,16 +37,19 @@ img{
     width: 70%;
     height: 70%;
     border-radius: 10px;
+    transition: 1s;
 }
 
 h1{
     font-size: 100px;
+    transition: 1s;
 }
 
 .about-container{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    transition: 1s;
 }
 
 .about-background{
@@ -53,6 +57,7 @@ h1{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    transition: 1s;
 }
 
 .about-texts{
@@ -61,6 +66,7 @@ h1{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    transition: 1s;
 }
 
 button{
@@ -74,14 +80,17 @@ button{
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
+    transition: 1s;
 }
 
 button:active{
     transform: scale(0.95);
+    transition: 1s;
 }
 
 button:focus{
     outline: none;
+    transition: 1s;
 }
 
 button:hover{
@@ -90,23 +99,27 @@ button:hover{
     color: black;
     transition: 0.5s;
     cursor: pointer;
+    transition: 1s;
 }
 
 button:not(hover){
     background-color: #010452;
     border-color: #010452;
     transition: 0.5s;
+    transition: 1s;
 }
 
 button.ghost{
     background-color: transparent;
     border-color: white;
+    transition: 1s;
 }
 
 .ghost-animation:hover{
     background-color: #fff;
     color: black;
     transition: 0.5s;
+    transition: 1s;
 }
 
 p{
@@ -115,4 +128,5 @@ p{
     text-indent: 10px;
     font-weight: 100;
     font-style: italic;
+    transition: 1s;
 }

@@ -48,7 +48,7 @@ if(isset($_POST['newPassword']) ||
 </head>
 <body>
     <div class="container">
-        <img src="img/arrow_back_icon_151627.png" alt="Botão de Voltar" id="backButton" onclick="backToHome()">
+        <img src="img/arrow_back_icon_151627.png" alt="Botão de Voltar" id="backButton2" onclick="backToHome()">
         <h1>Alterar sua Senha</h1>
         <form action="" method="POST">
             <input type="password" name="newPassword" placeholder="Nova Senha">

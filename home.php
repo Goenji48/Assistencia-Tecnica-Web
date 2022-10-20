@@ -4,6 +4,7 @@ $loginName = '';
 
 if(isset($_SESSION)){
 	$loginName = $_SESSION['name'];
+	$loginUsername = $_SESSION['username'];
 }
 ?>
 
@@ -41,7 +42,7 @@ if(isset($_SESSION)){
 								<a href="agendamento.php" class="btn4 alinhamento">Agendamentos<a>
 								<a href="servico.php" class="btn4 alinhamento">Serviço</a>
 								<a href="sobre.php" class="btn4 alinhamento">Sobre</a>
-								<a href="perfil.php" class="btn4 alinhamento" id="loginNome">Perfil</a>
+								<a href="perfil.php" class="btn4 alinhamento" id="loginNome"><?php echo $loginUsername ?></a>
 						</nav>
 					</div>
 				</header>

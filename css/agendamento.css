@@ -109,13 +109,23 @@ form{
     text-align: center;
 }
 
-input{
+input, select, textarea{
     background-color: #eee;
-    border: none;
+    border: 1px solid #0077ff;
+    border-radius: 10px;
     padding: 12px 15px;
+    outline: none;
     margin: 8px 0;
     width: 100%;
+    transition: 0.5s;
 }
+
+input:focus, select:hover, textarea:hover{
+    border-color: #0077ff;
+    box-shadow: 0 0 12px 0 #0077ff;
+    transition: 0.5s;
+}
+
 
 .container{
     background-color: #fff;
@@ -215,19 +225,7 @@ input{
     transform: translateX(20);
 }
 
-select{
-    background-color: #eee;
-    border-color: #fff;
-    height: 30px;
-    width: 100%;
-    margin: 5px;
-}
 
-textarea{
-    background-color: #eee;
-    border-color: #fff;
-    width: 100%;
-}
 
 .footer{
     list-style: none;

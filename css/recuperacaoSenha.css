@@ -29,17 +29,24 @@ form{
     flex-direction: column;
 }
 
-.container h1{
-}
 
 .container input{
+    background-color: #ddd;
+    border: 1px solid #0077ff;
+    border-radius: 10px;
+    padding: 12px 15px;
+    outline: none;
+    margin: 8px 0;
     width: 300px;
     height: 25px;
     margin: 30px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 2px;
-    padding: 12px 15px;
+    transition: 0.5s;
+}
+
+.container input:focus{
+    border-color: #0077ff;
+    box-shadow: 0 0 12px 0 #0077ff;
+    transition: 0.5s;
 }
 
 .container button:not(hover){
@@ -60,6 +67,14 @@ form{
     align-self: flex-start;
     margin-top: -200px;
     margin-left: 5px;
+    cursor: pointer;
+}
+
+#backButton2{
+    width: 10%;
+    align-self: flex-start;
+    margin-top: -120px;
+    margin-left: 20px;
     cursor: pointer;
 }
 

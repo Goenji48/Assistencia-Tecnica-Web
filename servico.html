@@ -23,7 +23,7 @@
             <!-- logo do site -->
             <header>
                 <div class="coluna col12">
-                    <h1 class="logo"><img src="video/ezgif.com-gif-maker2.gif" alt="app logo" width="230" />
+                    <h1 class="logo"><img src="video/ezgif.com-gif-maker2.gif" alt="app logo" width="230" id="logo"/>
                     </h1>
                 </div>
                 <div class="coluna col10">

@@ -9,6 +9,7 @@ body{
 	align-items: center;
 	justify-content: start;
 	flex-direction: column;
+	transition: 0.5s;
 }
 
 ::-webkit-scrollbar{
@@ -28,6 +29,9 @@ body{
 }
 .coluna{
 	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	float: right;
 
 }
@@ -139,11 +143,14 @@ nav{
 
 .header{
 	width: 100%;
+	background-color: #170940;
+}
+
+header{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: #170940;
 }
 .logo{
 	color: white;
