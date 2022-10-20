@@ -56,8 +56,10 @@ if(isset($_POST['search'])) {
 if(isset($_POST['budget'])) {
     if(isset($_SESSION)) {
         if(isset($_POST['value']) && isset($_POST['data'])){
-            if(strlen($_POST['value'] == 0) || strlen($_POST['data'] == 0)){
-                echo "Preencha o campo ID antes de Realizar o Orçamento";
+            if(strlen($_POST['value'] == 0)) {
+                echo "É obrigatório preencher esses campos!";
+            } else if(strlen($_POST['data'] == 0)) {
+                echo "É obrigatório preencher esses campos!";
             } else {
                 $price = $mysqli->real_escape_string($_POST['value']);
                 $data = $mysqli->real_escape_string($_POST['data']);
@@ -89,7 +91,7 @@ if(isset($_POST['budget'])) {
 
 
 if(isset($_POST['send'])){
-    if(isset($_SESSION['eid']) && isset($_SESSION['id']) && isset($_SESSION['serviceId'])) {
+    if(isset($_SESSION)) {
         $type = $mysqli->real_escape_string($_POST['send']);
         $id = $_SESSION['id'];
         $eid = $_SESSION['eid'];
@@ -106,10 +108,11 @@ if(isset($_POST['send'])){
             $cep = $user['cep'];
         }
         
-        $query_send = "INSERT INTO Envio VALUES(idEnvio, '$type', '$eid', '$serviceId', '$cep' ";
+        $query_send = "INSERT INTO Envio VALUES(idEnvio, '$type', '$eid', '$serviceId', '$cep' )";
 
         if($mysqli->query($query_send)){
             echo "Envio Registrado com Sucesso";
+            session_destroy();
         } else {
             die($mysqli->error);
         }
