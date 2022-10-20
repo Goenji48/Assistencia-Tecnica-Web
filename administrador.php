@@ -54,13 +54,13 @@ if(isset($_POST['search'])) {
 }
 
 if(isset($_POST['budget'])) {
-    if(isset($_SESSION)) {
         if(isset($_POST['value']) && isset($_POST['data'])){
             if(strlen($_POST['value'] == 0)) {
                 echo "É obrigatório preencher esses campos!";
             } else if(strlen($_POST['data'] == 0)) {
                 echo "É obrigatório preencher esses campos!";
             } else {
+                if(isset($_SESSION)) {
                 $price = $mysqli->real_escape_string($_POST['value']);
                 $data = $mysqli->real_escape_string($_POST['data']);
                 $id = $_SESSION['id'];
