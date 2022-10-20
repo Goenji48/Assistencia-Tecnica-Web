@@ -54,15 +54,15 @@ if(isset($_POST['search'])) {
 }
 
 if(isset($_POST['budget'])) {
-        if(isset($_POST['value']) && isset($_POST['data'])){
-            if(strlen($_POST['value'] == 0)) {
+        if(isset($_POST['price']) && isset($_POST['estimatedDate'])){
+            if(strlen($_POST['price'] == 0)) {
                 echo "É obrigatório preencher esses campos!";
-            } else if(strlen($_POST['data'] == 0)) {
+            } else if(strlen($_POST['estimatedDate'] == 0)) {
                 echo "É obrigatório preencher esses campos!";
             } else {
                 if(isset($_SESSION)) {
-                $price = $mysqli->real_escape_string($_POST['value']);
-                $data = $mysqli->real_escape_string($_POST['data']);
+                $price = $mysqli->real_escape_string($_POST['price']);
+                $data = $mysqli->real_escape_string($_POST['estimatedDate']);
                 $id = $_SESSION['id'];
                 $eid = $_SESSION['eid'];
                 $query_service = "INSERT INTO Servico VALUES(idServico, '$eid', '$id', '$price', '$data')";
@@ -112,7 +112,7 @@ if(isset($_POST['send'])){
 
         if($mysqli->query($query_send)){
             echo "Envio Registrado com Sucesso";
-            session_destroy();
+            //session_destroy();
         } else {
             die($mysqli->error);
         }
@@ -160,8 +160,8 @@ if(isset($_POST['send'])){
             <form action="" method="POST">
             <h1>Adicionar Valor</h1>
                 <h3>Valor</h3>
-                <input type="number" name="value">
-                <input type="date" name="data">
+                <input type="number" name="price">
+                <input type="date" name="estimatedDate">
                 <input type="submit" name="budget" class="buttons">
             </form>
             <form action="" method="POST">
