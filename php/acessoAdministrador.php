@@ -23,9 +23,11 @@ try{
     $mail->setFrom('tccassistenciatecnica@gmail.com');
     $email1 = 'joacraft89@gmail.com';
     if(isset($email1)){
+        $mail->CharSet = 'UTF-8';
         $mail->addAddress($email1);
         $mail->isHTML(true);
         $mail->setLanguage('pt');
+        $mail->Encoding = 'base64';
         $mail->Subject = "Pedido de Solicitação para Acesso ao Administrador";
         $url = "https://tccassistencia.herokuapp.com/php/checkEmailAdmin.php";
         $string = encode($url);
