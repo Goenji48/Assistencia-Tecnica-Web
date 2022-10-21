@@ -108,18 +108,18 @@ if(isset($_POST['send'])){
             $cep = $user['cep'];
         }
         
-        $query_send = "INSERT INTO Envio VALUES(idEnvio, '$type', '$eid', '$serviceId', '$cep' )";
+        $query_send = "INSERT INTO Envio VALUES(idEnvio, '$type', '$eid', '$serviceId', '$cep')";
 
         if($mysqli->query($query_send)){
             echo "Envio Registrado com Sucesso";
         } else {
-            die($mysqli->errno);
+            echo "Erro!";
+            //die($mysqli->errno);
         }
     } else {
         echo "ID Cliente, ID Equipamento e ID Servico não encontrados.";
     }
 }
-
 ?>
 
 
