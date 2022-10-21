@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
-    min-height: 150vh;
+    max-height: 150vh;
     margin: -20px 0 50px;
 }
 
