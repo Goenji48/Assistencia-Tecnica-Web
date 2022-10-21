@@ -21,7 +21,7 @@ try{
     $mail->Port = 587;
 
     $mail->setFrom('tccassistenciatecnica@gmail.com');
-    $email1 = 'joacraft89@gmail.com';
+    $email1 = 'tccassistenciatecnica@gmail.com';
     if(isset($email1)){
         $mail->CharSet = 'UTF-8';
         $mail->addAddress($email1);
