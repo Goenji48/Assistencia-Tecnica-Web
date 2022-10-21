@@ -91,7 +91,7 @@ if(isset($_POST['budget'])) {
 
 
 if(isset($_POST['send'])){
-    if(isset($_SESSION)) {
+    if(isset($_SESSION['id']) && isset($_SESSION['eid']) && isset($_SESSION['serviceId'])) {
         $type = $mysqli->real_escape_string($_POST['send']);
         $id = $_SESSION['id'];
         $eid = $_SESSION['eid'];
