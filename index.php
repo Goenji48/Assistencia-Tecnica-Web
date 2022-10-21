@@ -116,7 +116,7 @@ include("./php/protect_login.php");
 							<li style="margin-bottom: 20px;">
 							<img src="img/assistencia-tecnica-celular-1-825x510.jpg" class="width-image">
 							<h4>A partir de agora nós consertamos Smartphones e Tablets!</h4>
-							<p>Com novos estudos e ao longo da evolução da empresa, a partir de hoje ofereçemos reparos de smartphones e tablets.</p>
+							<p>Com novos estudos e ao longo da evolução da empresa, começamos a oferecer reparos de celulares e tablets.</p>
 							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 							</li>
 					</ul>

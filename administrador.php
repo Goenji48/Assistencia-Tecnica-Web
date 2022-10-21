@@ -48,9 +48,6 @@ if(isset($_POST['search'])) {
             }
         }
     }
-    $id = $_SESSION['id'];
-    $eid = $_SESSION['eid'];
-    printf("idUser: $id, idEquip: $eid ");
 }
 
 if(isset($_POST['budget'])) {
@@ -134,6 +131,7 @@ if(isset($_POST['send'])){
     <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/administrador.css">
+    <script src="javascript/administrador.js" defer></script>
 </head>
 <body>
     <div class="main-container">
@@ -160,7 +158,7 @@ if(isset($_POST['send'])){
             <h1>Adicionar Valor</h1>
                 <h3>Valor</h3>
                 <input type="number" name="price">
-                <input type="date" name="estimatedDate">
+                <input type="date" name="estimatedDate" id="date" max="2025-12-31">
                 <input type="submit" name="budget" class="buttons">
             </form>
             <form action="" method="POST">

@@ -52,8 +52,16 @@ isset($_POST['problemType']) || isset($_POST['dia']) || isset($_POST['hora'])){
 
         $querySchedule = "INSERT INTO Agendamento VALUES(idAgendamento, '$name', '$id', '$dia', '$hora', '$idCliente')";
 
+        $now = date("Y/m/d");
+
+        $hoursNow = date("H:i:");
+
         if($mysqli->query($querySchedule)){
-            echo "Agendamento Realizado com Sucesso!";
+            if($dia < $now || $hora < $hoursNow || $hora > $hoursNow){
+                echo "Data ou Horas Inválidas";
+            } else {
+                echo "Agendamento Realizado com Sucesso!";
+            }
         } else {
             die("Erro na execução do Código SQL: " . $mysqli->error);
         }
@@ -121,8 +129,8 @@ isset($_POST['problemType']) || isset($_POST['dia']) || isset($_POST['hora'])){
                 <option value="Outros">Outros</option>
             </select>
             <h3>Horário e Dia</h3>
-            <input type="date" name="dia"/>
-            <input type="time" name="hora"/>
+            <input type="date" name="dia" min="2022-01-01" max="2025-12-31" id="date" required/>
+            <input type="time" name="hora" min="07:00" max="19:00" required/>
     </div>
     <div class="sobreposicao-container">
         <div class="sobreposicao">

@@ -120,7 +120,7 @@ input, select, textarea{
     transition: 0.5s;
 }
 
-input:focus, select:hover, textarea:hover{
+input:focus, select:focus, textarea:focus{
     border-color: #0077ff;
     box-shadow: 0 0 12px 0 #0077ff;
     transition: 0.5s;

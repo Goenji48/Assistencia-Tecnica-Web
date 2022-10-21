@@ -120,7 +120,7 @@ if(isset($_SESSION)){
 							<li style="margin-bottom: 20px;">
 							<img src="img/assistencia-tecnica-celular-1-825x510.jpg" class="width-image">
 							<h4>A partir de agora nós consertamos Smartphones e Tablets!</h4>
-							<p>Realizamos reparos de Smartphones e Tablets sem nenhum custo adicional, independente do modelo ou de sua geração.</p>
+							<p>Com novos estudos e ao longo da evolução da empresa, começamos a oferecer reparos de celulares e tablets.</p>
 							<a href="servico.html" class="btnBlue button-border button">Leia mais &raquo;</a>
 							</li>
 					</ul>

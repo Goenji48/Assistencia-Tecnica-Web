@@ -22,8 +22,6 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
         //$query = "CALL login('$email', '$password')";
         $query1 = $mysqli->query($query) or die("Erro na execução do Código SQL: " . $mysqli->error);
 
-        
-
         $result = $query1->num_rows;
 
         if($result == 1){
@@ -69,16 +67,16 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
                     <a href="#" class="social"><i class="fab fa-youtube-f"></i></a>
                 </div>
                <!--<span>Ou use seu Email para registrar</span> -->
-                <input type="text" placeholder="RG" name="rg"  maxlength="12"/> 
-                <input type="text" placeholder="name" onblur="getName()" name="name"  maxlength="100"/>
-                <input type="text" placeholder="username" name="username" onblur="getUsername()" maxlength="100"/>
-                <input type="email" placeholder="email" name="email" id="email" maxlength="100"/>
-                <input type="password" placeholder="password" name="password" maxlength="50"/>
-                <input type="password" placeholder="confirm password" name="confirm_password" maxlenght="50"/>
-                <input type="text" placeholder="ano/mes/dia exemplo: 1967-07-01" name="date_birthday"/>
-                <input type="text" placeholder="phone" name="phone" maxlength="15"/>
-                <input type="text" placeholder="CEP" name="cep" maxlength="9">
-                <input type="text" placeholder="houseNumber" name="houseNumber" maxlength="5">
+                <input type="text" placeholder="RG" name="rg" id="rg"  maxlength="12"/> 
+                <input type="text" placeholder="Nome" onblur="getName()" name="name"  maxlength="100"/>
+                <input type="text" placeholder="Nome de Usuário" name="username" onblur="getUsername()" maxlength="100"/>
+                <input type="email" placeholder="Email" name="email" id="email" maxlength="100"/>
+                <input type="password" placeholder="Senha" name="password" maxlength="50"/>
+                <input type="password" placeholder="Confirmar Senha" name="confirm_password" maxlenght="50"/>
+                <input type="text" placeholder="Ano/Mês/Dia Exemplo: 1967-07-01" name="date_birthday"/>
+                <input type="text" placeholder="Telefone" name="phone" id="phone" maxlength="15"/>
+                <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="9">
+                <input type="text" placeholder="Número Residêncial" name="houseNumber" maxlength="5">
                 <button type="submit">Criar</button>
             </form>
         </div>
@@ -95,7 +93,7 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
             </div>
            <!-- <span>Ou Use Sua Conta</span> -->
             <input type="email" placeholder="Email" name="email_user" maxlength="100"/>
-            <input type="password" placeholder="Password" name="password_user" maxlength="50"/>
+            <input type="password" placeholder="Senha" name="password_user" maxlength="50"/>
             <a href="esqueceuSenha.php" id="esqueceusenha">Esqueceu Sua Senha?</a>
             <button id="logar" type="submit">Logar</button>
         </form>
