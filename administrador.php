@@ -112,9 +112,8 @@ if(isset($_POST['send'])){
 
         if($mysqli->query($query_send)){
             echo "Envio Registrado com Sucesso";
-            //session_destroy();
         } else {
-            die($mysqli->error);
+            die($mysqli->errno);
         }
     } else {
         echo "ID Cliente, ID Equipamento e ID Servico não encontrados.";
