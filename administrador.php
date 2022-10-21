@@ -54,7 +54,7 @@ if(isset($_POST['search'])) {
 }
 
 if(isset($_POST['budget'])) {
-        if(isset($_POST['price']) && isset($_POST['estimatedDate'])){
+        if(isset($_POST['price']) || isset($_POST['estimatedDate'])){
             if(strlen($_POST['price'] == 0)) {
                 echo "É obrigatório preencher esses campos!";
             } else if(strlen($_POST['estimatedDate'] == 0)) {
