@@ -11,6 +11,7 @@ const senha = document.getElementById('esqueceusenha');
 var rg = document.getElementById('rg');
 var phone = document.getElementById('phone');
 var cep = document.getElementById('cep');
+var birthday = document.getElementById('birthday');
 /*const email = document.getElementById('email').value;*/
 
 criarContaButton.addEventListener("click", addContainer);
@@ -32,6 +33,7 @@ phone.addEventListener('keypress', autoPhoneInput);
 phone.addEventListener('input', validatePhone);
 cep.addEventListener('keypress', autoCepInput);
 cep.addEventListener('input', validateCep);
+birthday.addEventListener('keypress', autoDateInput);
 
 function validateRg(){
     let validade = rg.value;
@@ -49,11 +51,12 @@ function validateRg(){
         rg.style.borderColor = "red";
         rg.style.boxShadow = "0 0 12px 0 red"
         rg.value = "";
-        alert("RG Inválido")
+        rg.setAttribute("placeholder", "RG Inválido");
     } else {
         rg.style.color = "black";
         rg.style.borderColor = "#0077ff";
         rg.style.boxShadow = "none";
+        rg.setAttribute("placeholder", "RG");
         rg.addEventListener('focus', (event) =>{
             rg.style.borderColor = "#0077ff";
             rg.style.boxShadow = "0 0 12px 0 #0077ff";
@@ -61,6 +64,8 @@ function validateRg(){
         });
     }
 }
+
+
 function autoRgInput(){
     let length = rg.value.length;
     if(length === 2 || length === 6){
@@ -88,11 +93,12 @@ function validatePhone(){
         phone.style.borderColor = "red";
         phone.style.boxShadow = "0 0 12px 0 red"
         phone.value = "";
-        alert("Telefone Inválido")
+        phone.setAttribute("placeholder", "Telefone Inválido");
     } else {
         phone.style.color = "black";
         phone.style.borderColor = "#0077ff";
         phone.style.boxShadow = "none";
+        phone.setAttribute("placeholder", "Telefone");
         phone.addEventListener('focus', (event) =>{
             phone.style.borderColor = "#0077ff";
             phone.style.boxShadow = "0 0 12px 0 #0077ff";
@@ -132,11 +138,12 @@ function validateCep(){
         cep.style.borderColor = "red";
         cep.style.boxShadow = "0 0 12px 0 red"
         cep.value = "";
-        alert("CEP Inválido")
+        cep.setAttribute("placeholder", "CEP Inválido");
     } else {
         cep.style.color = "black";
         cep.style.borderColor = "#0077ff";
         cep.style.boxShadow = "none";
+        cep.setAttribute("placeholder", "CEP");
         cep.addEventListener('focus', (event) =>{
             cep.style.borderColor = "#0077ff";
             cep.style.boxShadow = "0 0 12px 0 #0077ff";
@@ -150,5 +157,17 @@ function autoCepInput() {
     if(length === 5 || length === 6){
         cep.value += "-"
         }
+}
+
+function autoDateInput(){
+    let length = birthday.value.length;
+    if(length === 4){
+        birthday.value += "-"
+    }
+
+    if(length === 7){
+        birthday.value += "-"
+    }
+
 }
 

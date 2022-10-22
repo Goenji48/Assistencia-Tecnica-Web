@@ -73,8 +73,8 @@ if(isset($_POST['email_user']) || isset($_POST['password_user'])){
                 <input type="email" placeholder="Email" name="email" id="email" maxlength="100"/>
                 <input type="password" placeholder="Senha" name="password" maxlength="50"/>
                 <input type="password" placeholder="Confirmar Senha" name="confirm_password" maxlenght="50"/>
-                <input type="text" placeholder="Ano/Mês/Dia Exemplo: 1967-07-01" name="date_birthday"/>
-                <input type="text" placeholder="Telefone" name="phone" id="phone" maxlength="15"/>
+                <input type="text" placeholder="Ano/Mês/Dia Exemplo: 1967-07-01" name="date_birthday" id="birthday" maxlength="10"/>
+                <input type="tel" placeholder="Telefone" name="phone" id="phone" maxlength="15"/>
                 <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="9">
                 <input type="text" placeholder="Número Residêncial" name="houseNumber" maxlength="5">
                 <button type="submit">Criar</button>
