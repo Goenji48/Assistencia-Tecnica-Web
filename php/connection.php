@@ -1,9 +1,9 @@
 <?php
 
-$hostname = 'mysql.freehostia.com';
-$database = 'joosou40_assistenciatecnica';
-$user = 'joosou40_assistenciatecnica';
-$password = 'tccassistencia2022';
+$hostname = 'REMOVIDO POR SEGURANÇA';
+$database = 'REMOVIDO POR SEGURANÇA';
+$user = 'REMOVIDO POR SEGURANÇA';
+$password = 'REMOVIDO POR SEGURANÇA';
 
 $mysqli = new mysqli($hostname, $user, $password, $database); 
 

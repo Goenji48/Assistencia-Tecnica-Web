@@ -16,12 +16,12 @@ try{
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'tccassistenciatecnica@gmail.com';
-    $mail->Password = 'xintzpkaxgabmrro';
+    $mail->Username = 'REMOVIDO POR SEGURANÇA';
+    $mail->Password = 'REMOVIDO POR SEGURANÇA';
     $mail->Port = 587;
 
-    $mail->setFrom('tccassistenciatecnica@gmail.com');
-    $email1 = 'tccassistenciatecnica@gmail.com';
+    $mail->setFrom('REMOVIDO POR SEGURANÇA');
+    $email1 = 'REMOVIDO POR SEGURANÇA';
     if(isset($email1)){
         $mail->CharSet = 'UTF-8';
         $mail->addAddress($email1);
